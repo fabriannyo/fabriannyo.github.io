@@ -1,0 +1,29 @@
+footer {
+	
+}
+
+// desktop normal and tablet landscape ( max-width 1199px )
+@include media-breakpoint-down(lg) {
+
+	footer {
+
+	}
+}
+
+// desktop small and tablet potrait ( max-width 991px )
+@include media-breakpoint-down(md) {
+
+}
+
+// mobile potrait and landscape ( max-width 767px )
+@include media-breakpoint-down(sm) {
+
+	footer {
+
+	}
+}
+
+//small mobile (max-width 480px)
+@include media-breakpoint-down(xs) {
+
+}
