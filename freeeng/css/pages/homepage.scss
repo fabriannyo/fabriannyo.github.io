@@ -1,5 +1,7 @@
 section {
     &.hero {
+        position: relative;
+
         .steps-component {
             position: absolute;
             width: 100%;
@@ -17,6 +19,7 @@ section {
             .step {
                 width: 120px;
                 display: block;
+
                 
                 +.step {
                     margin: 0 0 0 auto;
@@ -25,7 +28,59 @@ section {
                 &:nth-child(6) {
                     .no {
                         img {
-                            left: 25px;
+                            left: 22px;
+                        }
+                    }
+                }
+
+                &:nth-child(1) {
+                    .no {
+                        img {
+                            width: 60px;
+                        }
+                    }
+                }
+
+                &:nth-child(2) {
+                    .no {
+                        img {
+                            width: 64px;
+                        }
+                    }
+                }
+
+                &:nth-child(3) {
+                    .no {
+                        img {
+                            left: 50px;
+                            width: 53px;
+                        }
+                    }
+                }
+
+                &:nth-child(4) {
+                    .no {
+                        img {
+                            left: 50px;
+                            width: 70px;
+                        }
+                    }
+                }
+
+                &:nth-child(5) {
+                    .no {
+                        img {
+                            left: 40px;
+                            width: 70px;
+                        }
+                    }
+                }
+
+                &:nth-child(7) {
+                    .no {
+                        img {
+                            left: 43px;
+                            width: 70px;
                         }
                     }
                 }
@@ -41,13 +96,12 @@ section {
                     }
                     
                     p {
-                        font-size: 7rem;
-                        font-weight: bold;
+                        font-size: 7.326rem;
+                        font-weight: 700;
                         color: #7bc383;
                         margin: 0 5px 0 0;
                         display: inline;
                         line-height: 1;
-                        font-family: Arial, Helvetica, sans-serif;
                     }
                 }
                 
@@ -56,8 +110,8 @@ section {
                     
                     p {
                         color: white;
-                        font-size: 1.6rem;
-                        font-size: 400;
+                        font-size: 1.7rem;
+                        font-size: 700;
                         margin: 0;
                     }
                 }
@@ -70,10 +124,10 @@ section {
             display: flex;
             
             > div:first-child {
-                width: 40vw;
+                width: 42vw;
             }
             > div:last-child {
-                width: 60vw
+                width: 58vw
             }
             .img-wrap {
                 img {
@@ -83,9 +137,23 @@ section {
             .body-wrap {
                 .title {
                     color: $second;
-                    font-size: 8rem;
-                    font-weight: 300;
+                    font-size: 6rem;
+                    font-weight: 400;
                     margin: 0 0 45px;
+                }
+
+                .description {
+                    p {
+                        font-size: 2rem;
+                        font-weight: 400;
+                    }
+                }
+
+                .btn {
+                    font-size: 2rem;
+                    font-weight: 700;
+                    letter-spacing: 2px;
+                    padding: 16px 39px;
                 }
             }
             
@@ -116,16 +184,15 @@ section {
 
         .section-title {
             text-align: center;
-            font-size: 4rem;
+            font-size: 5rem;
             margin: 0 0 20px;
             font-weight: 500;
             font-family: $lato;
-            color:$second;
-            letter-spacing: 1.5px;
+            color: $second;
         }
 
         .section-subtitle {
-            font-size: 2.8rem;
+            font-size: 3rem;
             margin: 0 0 70px;
             text-align: center;
             font-weight: 700;
@@ -133,22 +200,19 @@ section {
             color: #323232;
             letter-spacing: 2px;
         }
-
-        .tabs-component {
-            display: none;
-        }
     }
     
     &.plans {
-        background: #ccc url('../img/ui/plan-bg.jpg') repeat-x;
+        background: #ccc url('../img/ui/plan-bg.jpg') no-repeat;
+        background-size: cover;
         padding: 95px 0 190px;
         
         .section-title {
-            font-size: 5rem;
+            font-size: 6rem;
             text-align: center;
             color: white;
             margin: 0 0 90px;
-            font-family: 'Lato', Arial, sans-serif;
+            font-family: $lato;
         }
         
         .plans-component {
@@ -161,35 +225,36 @@ section {
                 background: #4ec753;
                 text-align: center;
                 position: relative;
+                transition: all .3s;
                 
-                &::before, &::after {
-                    content: '';
-                    width: 100%;
-                    height: 40px;
-                    background: $main;
-                    display: block;
-                    position: absolute;
-                    left: 0;
-                    z-index: -1;
-                    opacity: 0;
-                    transition: transform .3s .1s;
-                }
+                // &::before, &::after {
+                //     content: '';
+                //     width: 100%;
+                //     height: 40px;
+                //     background: $main;
+                //     display: block;
+                //     position: absolute;
+                //     left: 0;
+                //     z-index: -1;
+                //     opacity: 0;
+                //     transition: transform .3s .1s;
+                // }
                 
-                &::before {
-                    top: 0;
-                    height: 35px;
-                }
+                // &::before {
+                //     top: 0;
+                //     height: 35px;
+                // }
                 
-                &::after {
-                    bottom: 0;
-                }
+                // &::after {
+                //     bottom: 0;
+                // }
                 
                 .title {
                     color: white;
-                    font-size: 2rem;
+                    font-size: 3rem;
                     font-weight: 900;
                     letter-spacing: 2px;
-                    font-family: 'Lato', Arial, sans-serif;
+                    font-family: $lato;
                     
                     &::after {
                         content: '';
@@ -207,7 +272,7 @@ section {
                     padding: 0;
                     
                     li {
-                        font-size: 1.6rem;
+                        font-size: 2rem;
                         color: white;
                         
                         + li {
@@ -219,13 +284,15 @@ section {
                 .btn {
                     display: inline-block;
                     margin: 50px 0 0;
-                    font-weight: 500;
-                    padding: 12px 35px;
+                    font-weight: 700;
+                    font-size: 2rem;
+                    padding: 13px 40px;
                     letter-spacing: 1px;
                 }
                 
                 &.active {
                     background: #44ac4b;
+                    padding: 90px 20px 85px;
                     
                     &::before {
                         transform: translateY(-35px);
@@ -254,19 +321,29 @@ section {
             justify-content: space-between;
             
             .article {
-                flex: 0 1 364px;
+                width: calc(100%/3 - 40px/3);
                 background: white;
+
+                + .article {
+                    margin: 10px 0 0 20px;
+                }
+
+                &:first-child,
+                &:nth-child(2),
+                &:nth-child(3) {
+                    margin-top: 0;
+                }
+
+                &:nth-child(3n+1) {
+                    margin-left: 0;
+                }
                 
                 .img-wrap {
-                    height: 280px;
-                    position: relative;
                     
                     img {
                         width: 100%;
-                        position: absolute;
-                        top: 50%;
-                        left: 50%;
-                        transform: translate(-50%,-50%);
+                        height: 280px;
+                        object-fit: cover;
                     }
                 }
                 
@@ -275,7 +352,7 @@ section {
                     
                     .title {
                         margin: 0 0 35px;
-                        font-size: 3.5rem;
+                        font-size: 3rem;
                         letter-spacing: 2px;
                         font-weight: 700;
                         font-family: $lato;
@@ -283,14 +360,15 @@ section {
                     
                     .description {
                         p {
-                            font-weight: 500;
+                            font-size: 2rem;
                         }
                     }
                     
                     .btn {
-                        font-weight: 500;
-                        padding: 12px 25px;
-                        letter-spacing: 1px;
+                        font-size: 2rem;
+                        font-weight: 700;
+                        padding: 10px 20px;
+                        letter-spacing: 2px;
                     }
                 }
             }
@@ -302,16 +380,15 @@ section {
         
         .section-title {
             text-align: center;
-            font-size: 4rem;
+            font-size: 5rem;
             margin: 0 0 20px;
             font-weight: 500;
             font-family: $lato;
-            color:$second;
-            letter-spacing: 1.5px;
+            color: $second;
         }
 
         .section-subtitle {
-            font-size: 2.8rem;
+            font-size: 3rem;
             margin: 0 0 70px;
             text-align: center;
             font-weight: 700;
@@ -331,16 +408,18 @@ section {
         text-align: center;
         
         .section-title {
-            font-size: 2.5rem;
+            font-size: 3rem;
             margin: 0 0 40px;
-            font-weight: 500;
-            font-family: $lato;
+            font-weight: 700;
             color: white;
-            letter-spacing: 1.5px;
+            letter-spacing: 2px;
         }
         
         .btn {
             display: inline-block;
+            font-size: 2rem;
+            letter-spacing: 2px;
+            padding: 15px 70px;
         }
     }
     
@@ -362,6 +441,15 @@ section {
         }
     }
 }
+
+@media (max-width:1366px) {
+    section {
+        &.hero {
+
+        }
+    }
+}
+
 
 // desktop normal and tablet landscape ( max-width 1199px )
 @include media-breakpoint-down(lg) {

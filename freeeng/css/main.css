@@ -1,7 +1,7 @@
 /* ===== Main Styles ===========================================================================
- 	Author: Agung DLGS (agung@gmail.com)
- 	2018
- 	Info: Main styling for Free Engineer (desktop-first approach)
+Author: Agung DLGS (agung@gmail.com)
+2018
+Info: Main styling for Free Engineer (desktop-first approach)
 ===================================================================================================
 */
 /*!
@@ -1815,6 +1815,8 @@ html {
   font-size: 10px; }
 
 body.revamp {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   font-size: 10px;
   font-family: "Lato", sans-serif;
   color: #323232;
@@ -1938,7 +1940,7 @@ body.revamp {
         display: block;
         width: 100%;
         color: black;
-        font-family: "Roboto", sans-serif;
+        font-family: "Lato", sans-serif;
         letter-spacing: 0px;
         font-size: 14px;
         text-transform: none;
@@ -1978,36 +1980,39 @@ body.revamp {
     display: block; }
   body.revamp .slider-component {
     position: relative;
-    z-index: 2;
-    height: calc(100vh - 34px); }
+    z-index: 2; }
     body.revamp .slider-component .slider-wrap {
       position: relative; }
       body.revamp .slider-component .slider-wrap .slider-img {
-        overflow: hidden;
-        height: calc(100vh - 34px); }
+        overflow: hidden; }
         body.revamp .slider-component .slider-wrap .slider-img img {
           width: 100%; }
       body.revamp .slider-component .slider-wrap .slider-text {
         position: absolute;
-        top: 45vh;
+        top: 32vh;
         left: 50vw;
-        -webkit-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%); }
+        -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        transform: translateX(-50%); }
       body.revamp .slider-component .slider-wrap .subtitle {
-        font-size: 6rem;
+        font-size: 5rem;
         color: white;
-        font-weight: 100;
+        font-weight: 300;
+        white-space: nowrap;
         text-align: center;
         margin: 0 0 20px; }
+        body.revamp .slider-component .slider-wrap .subtitle + .slider-button {
+          margin: 80px 0 0 0; }
       body.revamp .slider-component .slider-wrap .title {
-        font-size: 10rem;
+        font-size: 8rem;
         color: white;
-        font-weight: 500;
+        font-weight: 700;
         letter-spacing: 20px;
         text-transform: uppercase;
         text-align: center;
         margin: 0 0 32px; }
+        body.revamp .slider-component .slider-wrap .title + .slider-button {
+          margin: 65px 0 0 0; }
       body.revamp .slider-component .slider-wrap .slider-button {
         display: -webkit-box;
         display: -ms-flexbox;
@@ -2015,15 +2020,20 @@ body.revamp {
         -webkit-box-pack: center;
         -ms-flex-pack: center;
         justify-content: center; }
+        body.revamp .slider-component .slider-wrap .slider-button .btn {
+          font-weight: 700;
+          font-size: 1.7rem;
+          letter-spacing: 4px;
+          padding: 13px 45px; }
         body.revamp .slider-component .slider-wrap .slider-button .btn + .btn {
           margin: 0 0 0 10px; }
     body.revamp .slider-component .slick-dots {
       position: absolute;
       left: 50%;
-      top: calc(78vh - 34px);
       -webkit-transform: translateX(-50%);
       -ms-transform: translateX(-50%);
       transform: translateX(-50%);
+      bottom: 165px;
       list-style: none;
       display: -webkit-box !important;
       display: -ms-flexbox !important;
@@ -2053,6 +2063,107 @@ body.revamp {
           outline: none; }
         body.revamp .slider-component .slick-dots li.slick-active button, body.revamp .slider-component .slick-dots li:hover button {
           background: #fe8d00; }
+  body.revamp .tabs-component {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s; }
+    body.revamp .tabs-component .tab-h {
+      -webkit-box-flex: 1;
+      -ms-flex: 1 1 32vw;
+      flex: 1 1 32vw; }
+      body.revamp .tabs-component .tab-h .tab-head {
+        background: #ededed;
+        color: #333;
+        -webkit-transition: all .3s;
+        -o-transition: all .3s;
+        transition: all .3s;
+        position: relative;
+        padding: 10px 40px 10px 80px;
+        font-size: 1.8rem;
+        font-weight: 700;
+        height: 70px;
+        line-height: 25px;
+        border-top-left-radius: 35px;
+        border-bottom-left-radius: 35px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center; }
+        body.revamp .tabs-component .tab-h .tab-head + .tab-head {
+          margin: 20px 0 0 0; }
+        body.revamp .tabs-component .tab-h .tab-head::before {
+          content: '';
+          position: absolute;
+          left: 27px;
+          top: 50%;
+          -webkit-transform: translateY(-50%) rotate(45deg);
+          -ms-transform: translateY(-50%) rotate(45deg);
+          transform: translateY(-50%) rotate(45deg);
+          z-index: 3;
+          width: 16px;
+          height: 16px;
+          display: inline-block;
+          border-top: 3px solid #c7c7c7;
+          border-right: 3px solid #c7c7c7; }
+        body.revamp .tabs-component .tab-h .tab-head::after {
+          content: '';
+          position: absolute;
+          z-index: 2;
+          left: 14px;
+          top: 50%;
+          -webkit-transform: translateY(-50%);
+          -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          background: white; }
+        body.revamp .tabs-component .tab-h .tab-head.active {
+          background: #44ac4b;
+          color: white;
+          text-transform: uppercase; }
+          body.revamp .tabs-component .tab-h .tab-head.active::before {
+            border-top-color: #fe8d00;
+            border-right-color: #fe8d00; }
+    body.revamp .tabs-component .tab-b {
+      -webkit-box-flex: 1;
+      -ms-flex: 1 1 68vw;
+      flex: 1 1 68vw;
+      position: relative; }
+      body.revamp .tabs-component .tab-b .tab-body {
+        position: absolute;
+        top: 0;
+        z-index: -1;
+        -webkit-transition: all .3s;
+        -o-transition: all .3s;
+        transition: all .3s;
+        opacity: 0;
+        visibility: hidden;
+        background: #4fc753;
+        color: white;
+        font-size: 1.8rem;
+        padding: 18px 28px; }
+        body.revamp .tabs-component .tab-b .tab-body .question {
+          margin: 0 0 10px; }
+          body.revamp .tabs-component .tab-b .tab-body .question::before {
+            content: 'Q :';
+            margin: 0 5px 0 0;
+            font-weight: 900;
+            font-size: 2rem; }
+        body.revamp .tabs-component .tab-b .tab-body .answer::before {
+          content: 'A :';
+          margin: 0 5px 0 0;
+          font-weight: 900;
+          font-size: 2rem; }
+        body.revamp .tabs-component .tab-b .tab-body.active {
+          z-index: 2;
+          opacity: 1;
+          visibility: visible; }
   body.revamp .btn {
     text-transform: uppercase;
     padding: 18px 35px;
@@ -2158,14 +2269,17 @@ body.revamp {
             -webkit-transition: all .3s;
             -o-transition: all .3s;
             transition: all .3s;
-            font-size: 1.2rem;
+            font-size: 1.3rem;
+            font-weight: 700;
             color: white; }
             body.revamp header .info-component .contacts .contact a:hover {
               text-decoration: none;
               -webkit-box-shadow: inset 0 -1px 0 0;
               box-shadow: inset 0 -1px 0 0; }
-      body.revamp header .info-component .social-medias .social img {
-        height: 20px; }
+      body.revamp header .info-component .social-medias .social img, body.revamp header .info-component .social-medias .social svg {
+        height: 20px;
+        width: 20px;
+        fill: white; }
       body.revamp header .info-component .social-medias .social + .social {
         margin: 0 0 0 7px; }
     body.revamp header .navigation-component {
@@ -2186,15 +2300,16 @@ body.revamp {
         margin: 0; }
         body.revamp header .navigation-component .nav .nav-logo {
           margin: 0 40px; }
-          body.revamp header .navigation-component .nav .nav-logo img {
-            height: 85px; }
+          body.revamp header .navigation-component .nav .nav-logo img, body.revamp header .navigation-component .nav .nav-logo svg {
+            width: 107px;
+            fill: white; }
         body.revamp header .navigation-component .nav .nav-item a {
           text-decoration: none;
           -webkit-transition: all .3s;
           -o-transition: all .3s;
           transition: all .3s;
           color: white;
-          font-size: 1.4rem;
+          font-size: 1.35rem;
           letter-spacing: 1px; }
           body.revamp header .navigation-component .nav .nav-item a:hover {
             text-decoration: none;
@@ -2202,7 +2317,8 @@ body.revamp {
             box-shadow: inset 0 -1px 0 0; }
         body.revamp header .navigation-component .nav .nav-item.squared {
           border: 1px solid white;
-          padding: 6px 15px; }
+          padding: 6px 15px;
+          border-radius: 20px; }
           body.revamp header .navigation-component .nav .nav-item.squared a {
             text-decoration: none;
             font-weight: bold; }
@@ -2311,67 +2427,92 @@ body.revamp {
       body.revamp header .mobile-trigger.closed::after, body.revamp header.minimize .mobile-trigger.closed::after {
         -webkit-animation: closedBotAnim .35s forwards ease-in-out 1;
         animation: closedBotAnim .35s forwards ease-in-out 1; } }
-  body.revamp main[role="main"] section.hero .steps-component {
-    position: absolute;
-    width: 100%;
-    z-index: 3; }
-    body.revamp main[role="main"] section.hero .steps-component .container {
-      background: #44ac4b;
-      width: 1110px;
-      padding: 40px 30px 25px;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-      justify-content: space-between;
-      -webkit-box-align: start;
-      -ms-flex-align: start;
-      align-items: flex-start; }
-    body.revamp main[role="main"] section.hero .steps-component .step {
-      width: 120px;
-      display: block; }
-      body.revamp main[role="main"] section.hero .steps-component .step + .step {
-        margin: 0 0 0 auto; }
-      body.revamp main[role="main"] section.hero .steps-component .step:nth-child(6) .no img {
-        left: 25px; }
-      body.revamp main[role="main"] section.hero .steps-component .step .no {
-        margin: 0 0 15px 0;
-        position: relative; }
-        body.revamp main[role="main"] section.hero .steps-component .step .no img {
-          position: absolute;
-          bottom: 5px;
-          left: 42px; }
-        body.revamp main[role="main"] section.hero .steps-component .step .no p {
-          font-size: 7rem;
-          font-weight: bold;
-          color: #7bc383;
-          margin: 0 5px 0 0;
-          display: inline;
-          line-height: 1;
-          font-family: Arial, Helvetica, sans-serif; }
-      body.revamp main[role="main"] section.hero .steps-component .step .description {
-        text-align: center; }
-        body.revamp main[role="main"] section.hero .steps-component .step .description p {
-          color: white;
-          font-size: 1.6rem;
-          font-size: 400;
-          margin: 0; }
+  body.revamp main[role="main"] section.hero {
+    position: relative; }
+    body.revamp main[role="main"] section.hero .steps-component {
+      position: absolute;
+      width: 100%;
+      z-index: 3; }
+      body.revamp main[role="main"] section.hero .steps-component .container {
+        background: #44ac4b;
+        width: 1110px;
+        padding: 40px 30px 25px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        -webkit-box-align: start;
+        -ms-flex-align: start;
+        align-items: flex-start; }
+      body.revamp main[role="main"] section.hero .steps-component .step {
+        width: 120px;
+        display: block; }
+        body.revamp main[role="main"] section.hero .steps-component .step + .step {
+          margin: 0 0 0 auto; }
+        body.revamp main[role="main"] section.hero .steps-component .step:nth-child(6) .no img {
+          left: 22px; }
+        body.revamp main[role="main"] section.hero .steps-component .step:nth-child(1) .no img {
+          width: 60px; }
+        body.revamp main[role="main"] section.hero .steps-component .step:nth-child(2) .no img {
+          width: 64px; }
+        body.revamp main[role="main"] section.hero .steps-component .step:nth-child(3) .no img {
+          left: 50px;
+          width: 53px; }
+        body.revamp main[role="main"] section.hero .steps-component .step:nth-child(4) .no img {
+          left: 50px;
+          width: 70px; }
+        body.revamp main[role="main"] section.hero .steps-component .step:nth-child(5) .no img {
+          left: 40px;
+          width: 70px; }
+        body.revamp main[role="main"] section.hero .steps-component .step:nth-child(7) .no img {
+          left: 43px;
+          width: 70px; }
+        body.revamp main[role="main"] section.hero .steps-component .step .no {
+          margin: 0 0 15px 0;
+          position: relative; }
+          body.revamp main[role="main"] section.hero .steps-component .step .no img {
+            position: absolute;
+            bottom: 5px;
+            left: 42px; }
+          body.revamp main[role="main"] section.hero .steps-component .step .no p {
+            font-size: 7.326rem;
+            font-weight: 700;
+            color: #7bc383;
+            margin: 0 5px 0 0;
+            display: inline;
+            line-height: 1; }
+        body.revamp main[role="main"] section.hero .steps-component .step .description {
+          text-align: center; }
+          body.revamp main[role="main"] section.hero .steps-component .step .description p {
+            color: white;
+            font-size: 1.7rem;
+            font-size: 700;
+            margin: 0; }
   body.revamp main[role="main"] section.reasons .reason-component {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex; }
     body.revamp main[role="main"] section.reasons .reason-component > div:first-child {
-      width: 40vw; }
+      width: 42vw; }
     body.revamp main[role="main"] section.reasons .reason-component > div:last-child {
-      width: 60vw; }
+      width: 58vw; }
     body.revamp main[role="main"] section.reasons .reason-component .img-wrap img {
       width: 100%; }
     body.revamp main[role="main"] section.reasons .reason-component .body-wrap .title {
       color: #fe8d00;
-      font-size: 8rem;
-      font-weight: 300;
+      font-size: 6rem;
+      font-weight: 400;
       margin: 0 0 45px; }
+    body.revamp main[role="main"] section.reasons .reason-component .body-wrap .description p {
+      font-size: 2rem;
+      font-weight: 400; }
+    body.revamp main[role="main"] section.reasons .reason-component .body-wrap .btn {
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      padding: 16px 39px; }
     body.revamp main[role="main"] section.reasons .reason-component:first-child .body-wrap {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -2406,31 +2547,29 @@ body.revamp {
     padding: 90px 0; }
     body.revamp main[role="main"] section.faq .section-title {
       text-align: center;
-      font-size: 4rem;
+      font-size: 5rem;
       margin: 0 0 20px;
       font-weight: 500;
       font-family: "Lato", sans-serif;
-      color: #fe8d00;
-      letter-spacing: 1.5px; }
+      color: #fe8d00; }
     body.revamp main[role="main"] section.faq .section-subtitle {
-      font-size: 2.8rem;
+      font-size: 3rem;
       margin: 0 0 70px;
       text-align: center;
       font-weight: 700;
       font-family: "Lato", sans-serif;
       color: #323232;
       letter-spacing: 2px; }
-    body.revamp main[role="main"] section.faq .tabs-component {
-      display: none; }
   body.revamp main[role="main"] section.plans {
-    background: #ccc url("../img/ui/plan-bg.jpg") repeat-x;
+    background: #ccc url("../img/ui/plan-bg.jpg") no-repeat;
+    background-size: cover;
     padding: 95px 0 190px; }
     body.revamp main[role="main"] section.plans .section-title {
-      font-size: 5rem;
+      font-size: 6rem;
       text-align: center;
       color: white;
       margin: 0 0 90px;
-      font-family: 'Lato', Arial, sans-serif; }
+      font-family: "Lato", sans-serif; }
     body.revamp main[role="main"] section.plans .plans-component {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -2443,33 +2582,16 @@ body.revamp {
         padding: 50px 20px;
         background: #4ec753;
         text-align: center;
-        position: relative; }
-        body.revamp main[role="main"] section.plans .plans-component .plan::before, body.revamp main[role="main"] section.plans .plans-component .plan::after {
-          content: '';
-          width: 100%;
-          height: 40px;
-          background: #44ac4b;
-          display: block;
-          position: absolute;
-          left: 0;
-          z-index: -1;
-          opacity: 0;
-          -webkit-transition: -webkit-transform .3s .1s;
-          transition: -webkit-transform .3s .1s;
-          -o-transition: transform .3s .1s;
-          transition: transform .3s .1s;
-          transition: transform .3s .1s, -webkit-transform .3s .1s; }
-        body.revamp main[role="main"] section.plans .plans-component .plan::before {
-          top: 0;
-          height: 35px; }
-        body.revamp main[role="main"] section.plans .plans-component .plan::after {
-          bottom: 0; }
+        position: relative;
+        -webkit-transition: all .3s;
+        -o-transition: all .3s;
+        transition: all .3s; }
         body.revamp main[role="main"] section.plans .plans-component .plan .title {
           color: white;
-          font-size: 2rem;
+          font-size: 3rem;
           font-weight: 900;
           letter-spacing: 2px;
-          font-family: 'Lato', Arial, sans-serif; }
+          font-family: "Lato", sans-serif; }
           body.revamp main[role="main"] section.plans .plans-component .plan .title::after {
             content: '';
             display: table;
@@ -2482,18 +2604,20 @@ body.revamp {
           margin: 0;
           padding: 0; }
           body.revamp main[role="main"] section.plans .plans-component .plan ul li {
-            font-size: 1.6rem;
+            font-size: 2rem;
             color: white; }
             body.revamp main[role="main"] section.plans .plans-component .plan ul li + li {
               margin: 10px 0 0; }
         body.revamp main[role="main"] section.plans .plans-component .plan .btn {
           display: inline-block;
           margin: 50px 0 0;
-          font-weight: 500;
-          padding: 12px 35px;
+          font-weight: 700;
+          font-size: 2rem;
+          padding: 13px 40px;
           letter-spacing: 1px; }
         body.revamp main[role="main"] section.plans .plans-component .plan.active {
-          background: #44ac4b; }
+          background: #44ac4b;
+          padding: 90px 20px 85px; }
           body.revamp main[role="main"] section.plans .plans-component .plan.active::before {
             -webkit-transform: translateY(-35px);
             -ms-transform: translateY(-35px);
@@ -2518,47 +2642,45 @@ body.revamp {
       -ms-flex-pack: justify;
       justify-content: space-between; }
       body.revamp main[role="main"] section.articles .articles-component .article {
-        -webkit-box-flex: 0;
-        -ms-flex: 0 1 364px;
-        flex: 0 1 364px;
+        width: calc(100%/3 - 40px/3);
         background: white; }
-        body.revamp main[role="main"] section.articles .articles-component .article .img-wrap {
+        body.revamp main[role="main"] section.articles .articles-component .article + .article {
+          margin: 10px 0 0 20px; }
+        body.revamp main[role="main"] section.articles .articles-component .article:first-child, body.revamp main[role="main"] section.articles .articles-component .article:nth-child(2), body.revamp main[role="main"] section.articles .articles-component .article:nth-child(3) {
+          margin-top: 0; }
+        body.revamp main[role="main"] section.articles .articles-component .article:nth-child(3n+1) {
+          margin-left: 0; }
+        body.revamp main[role="main"] section.articles .articles-component .article .img-wrap img {
+          width: 100%;
           height: 280px;
-          position: relative; }
-          body.revamp main[role="main"] section.articles .articles-component .article .img-wrap img {
-            width: 100%;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            -webkit-transform: translate(-50%, -50%);
-            -ms-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%); }
+          -o-object-fit: cover;
+          object-fit: cover; }
         body.revamp main[role="main"] section.articles .articles-component .article .body-wrap {
           padding: 50px 30px 55px; }
           body.revamp main[role="main"] section.articles .articles-component .article .body-wrap .title {
             margin: 0 0 35px;
-            font-size: 3.5rem;
+            font-size: 3rem;
             letter-spacing: 2px;
             font-weight: 700;
             font-family: "Lato", sans-serif; }
           body.revamp main[role="main"] section.articles .articles-component .article .body-wrap .description p {
-            font-weight: 500; }
+            font-size: 2rem; }
           body.revamp main[role="main"] section.articles .articles-component .article .body-wrap .btn {
-            font-weight: 500;
-            padding: 12px 25px;
-            letter-spacing: 1px; }
+            font-size: 2rem;
+            font-weight: 700;
+            padding: 10px 20px;
+            letter-spacing: 2px; }
   body.revamp main[role="main"] section.calculator {
     padding: 85px 0; }
     body.revamp main[role="main"] section.calculator .section-title {
       text-align: center;
-      font-size: 4rem;
+      font-size: 5rem;
       margin: 0 0 20px;
       font-weight: 500;
       font-family: "Lato", sans-serif;
-      color: #fe8d00;
-      letter-spacing: 1.5px; }
+      color: #fe8d00; }
     body.revamp main[role="main"] section.calculator .section-subtitle {
-      font-size: 2.8rem;
+      font-size: 3rem;
       margin: 0 0 70px;
       text-align: center;
       font-weight: 700;
@@ -2572,14 +2694,16 @@ body.revamp {
     background: #fe8d00;
     text-align: center; }
     body.revamp main[role="main"] section.contact-us .section-title {
-      font-size: 2.5rem;
+      font-size: 3rem;
       margin: 0 0 40px;
-      font-weight: 500;
-      font-family: "Lato", sans-serif;
+      font-weight: 700;
       color: white;
-      letter-spacing: 1.5px; }
+      letter-spacing: 2px; }
     body.revamp main[role="main"] section.contact-us .btn {
-      display: inline-block; }
+      display: inline-block;
+      font-size: 2rem;
+      letter-spacing: 2px;
+      padding: 15px 70px; }
   body.revamp main[role="main"] section.vision {
     background: url("../img/content/vision.jpg") no-repeat;
     background-position: center center;
@@ -2628,10 +2752,29 @@ body.revamp {
             -webkit-box-align: start;
             -ms-flex-align: start;
             align-items: flex-start; }
-          body.revamp footer .footer-top .info-component .contacts img {
-            margin: 0 10px 0 0; }
+            body.revamp footer .footer-top .info-component .contacts .contact:last-child .icon img {
+              width: 14px; }
+          body.revamp footer .footer-top .info-component .contacts .icon {
+            margin: 0 10px 0 0;
+            position: relative; }
+            body.revamp footer .footer-top .info-component .contacts .icon::before {
+              width: 35px;
+              height: 35px;
+              border-radius: 50%;
+              background: white;
+              content: '';
+              display: block; }
+            body.revamp footer .footer-top .info-component .contacts .icon img {
+              width: 18px;
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              -webkit-transform: translate(-50%, -50%);
+              -ms-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%); }
           body.revamp footer .footer-top .info-component .contacts a {
             color: white;
+            font-size: 2rem;
             text-decoration: none;
             margin: 5px 0 0 0; }
         body.revamp footer .footer-top .info-component .foot-nav {
@@ -2644,8 +2787,9 @@ body.revamp {
           justify-content: space-between; }
           body.revamp footer .footer-top .info-component .foot-nav a {
             color: white;
-            font-size: 1.4rem;
-            font-weight: 300;
+            font-size: 1.3rem;
+            font-weight: 700;
+            letter-spacing: 2px;
             font-family: "Lato", sans-serif;
             text-decoration: none; }
     body.revamp footer .footer-bottom {
@@ -2663,10 +2807,11 @@ body.revamp {
         justify-content: space-between; }
       body.revamp footer .footer-bottom .copyright span, body.revamp footer .footer-bottom .copyright a {
         color: white;
-        font-size: 1.4rem;
-        font-weight: 400;
+        font-size: 1.3rem;
+        font-weight: 300;
         font-family: "Lato", sans-serif;
-        letter-spacing: 1.5px; }
+        letter-spacing: 1.5px;
+        font-family: 'Roboto', sans-serif; }
       body.revamp footer .footer-bottom .copyright a {
         text-decoration: none;
         -webkit-transition: all .3s;
@@ -2688,10 +2833,10 @@ body.revamp {
           background: white; }
       body.revamp footer .footer-bottom .sign a {
         color: white;
-        font-size: 1.4rem;
+        font-size: 1.3rem;
         font-weight: 300;
-        font-family: "Lato", sans-serif;
         letter-spacing: 1.5px;
+        font-family: 'Roboto', sans-serif;
         text-decoration: none;
         -webkit-transition: all .3s;
         -o-transition: all .3s;
@@ -2932,19 +3077,19 @@ body.revamp {
     -webkit-transform: rotate(0);
     transform: rotate(0); } }
   body.revamp h1 {
-    font-family: "Roboto", sans-serif;
+    font-family: "Lato", sans-serif;
     font-weight: 400;
     font-size: 3rem;
     line-height: normal;
     color: #323232; }
   body.revamp h2 {
-    font-family: "Roboto", sans-serif;
+    font-family: "Lato", sans-serif;
     font-weight: 400;
     font-size: 2rem;
     line-height: normal;
     color: #323232; }
   body.revamp h3 {
-    font-family: "Roboto", sans-serif;
+    font-family: "Lato", sans-serif;
     font-weight: 400;
     font-size: 2rem;
     line-height: normal;
@@ -2956,14 +3101,12 @@ body.revamp {
     line-height: normal;
     color: #323232; }
   body.revamp p, body.revamp span {
-    font-family: 'Raleway', sans-serif;
     font-size: 1.6rem;
     font-weight: normal;
     line-height: 1.4;
     margin-bottom: 25px;
     color: #323232; }
   body.revamp a {
-    font-family: 'Raleway', sans-serif;
     font-weight: 400;
     font-size: 1.6rem;
     color: #fe8d00; }
@@ -2974,14 +3117,12 @@ body.revamp {
   body.revamp ul {
     padding: 0;
     margin-bottom: 15px;
-    font-family: 'Raleway', sans-serif;
     font-weight: 400;
     font-size: 1.6rem;
     color: #323232; }
   body.revamp ol {
     padding: 0;
     margin-bottom: 15px;
-    font-family: 'Raleway', sans-serif;
     font-weight: 400;
     font-size: 1.6rem;
     color: #323232; }
@@ -3074,7 +3215,7 @@ body.revamp {
     border: 1px solid black;
     padding: 5px 20px;
     position: relative;
-    font-family: "Roboto", sans-serif;
+    font-family: "Lato", sans-serif;
     font-size: 1.3rem;
     font-weight: 700;
     letter-spacing: 0.3em;
@@ -3103,7 +3244,7 @@ body.revamp {
         -o-transition: all 200ms;
         transition: all 200ms; }
   body.revamp blockquote {
-    font-family: "Roboto", sans-serif;
+    font-family: "Lato", sans-serif;
     letter-spacing: 0.1em;
     font-weight: 400;
     font-size: 3.5rem;
@@ -3232,7 +3373,7 @@ body.revamp {
       body.revamp .input-group .dropdown-select .nice-select {
         border-radius: 0; }
         body.revamp .input-group .dropdown-select .nice-select span {
-          font-family: "Roboto", sans-serif;
+          font-family: "Lato", sans-serif;
           font-weight: 400;
           font-size: 1.4rem;
           color: #727272; }
@@ -3241,7 +3382,7 @@ body.revamp {
           border-radius: 0;
           padding-left: 0; }
           body.revamp .input-group .dropdown-select .nice-select ul li {
-            font-family: "Roboto", sans-serif;
+            font-family: "Lato", sans-serif;
             font-size: 1.6rem;
             color: black; }
         body.revamp .input-group .dropdown-select .nice-select.open {

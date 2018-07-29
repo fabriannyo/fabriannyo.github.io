@@ -156,7 +156,6 @@ h4 {
 }
 
 p,span {
-	font-family: 'Raleway', sans-serif;
 	font-size: 1.6rem;
 	font-weight: normal;
 	line-height: 1.4;
@@ -165,7 +164,6 @@ p,span {
 }
 
 a {
-	font-family: 'Raleway', sans-serif;
 	font-weight: 400;
 	font-size: 1.6rem;
 	color: $second;
@@ -182,8 +180,6 @@ a {
 ul {
 	padding: 0;
 	margin-bottom: 15px;
-	
-	font-family: 'Raleway', sans-serif;
 	font-weight: 400;
 	font-size: 1.6rem;
 	color: $body;
@@ -195,8 +191,6 @@ ul {
 ol {
 	padding: 0;
 	margin-bottom: 15px;
-	
-	font-family: 'Raleway', sans-serif;
 	font-weight: 400;
 	font-size: 1.6rem;
 	color: $body;
@@ -337,7 +331,7 @@ table {
 	border: 1px solid black;
 	padding: 5px 20px;
 	position: relative;
-	font-family: $roboto;
+	font-family: $lato;
 	font-size: 1.3rem;
 	font-weight: 700;
 	letter-spacing: 0.3em;
@@ -367,7 +361,7 @@ table {
 }
 
 blockquote {
-	font-family: $roboto;
+	font-family: $lato;
 	letter-spacing: 0.1em;
 	font-weight: 400;
 	font-size: 3.5rem;
@@ -534,7 +528,7 @@ blockquote {
 			border-radius: 0;
 			
 			span {
-				font-family: $roboto;
+				font-family: $lato;
 				font-weight: 400;
 				font-size: 1.4rem;
 				color: #727272;
@@ -546,7 +540,7 @@ blockquote {
 				padding-left: 0;
 				
 				li {
-					font-family: $roboto;
+					font-family: $lato;
 					font-size: 1.6rem;
 					color: black;
 				}

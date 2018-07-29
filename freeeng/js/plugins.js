@@ -38,17 +38,27 @@ FreeEng.UIComponents = function( customSetting ) {
 		return fn ? this.bind( 'scroll touchmove', debounce(fn)) : this.trigger(smartScroll);
 	}
 	
+	String.prototype.trimToLength = function(m) {
+		return (this.length > m) 
+			? jQuery.trim(this).substring(0, m).split(" ").slice(0, -1).join(" ") + "..."
+			: this;
+	};
+	
 	this.init = function() {
-
+		
 		initSlick();
-
+		
 		initHero();
-
+		
 		initSmartResize();
+		
+		initPlans();
+		
+		initTab();
 	}
 	
 	// const initHeader = function() {
-		
+	
 	// 	if ( $( 'header').length ) {
 	// 		$( document ).scrollTop() > 40 ? $( 'header' ).addClass( 'minimize' ) : '';
 	// 	}
@@ -66,38 +76,111 @@ FreeEng.UIComponents = function( customSetting ) {
 			fade: true,
 			slidesToShow: 1,
 			slidesToScroll: 1,
-			autoplay: false,
+			autoplay: true,
 			autoplaySpeed: 3000
 		})
 	}
 	
-	// method to initialize slick js
+	// method to initialize slick.js
+	// dependency with vendor/slick.js
 	const initSlick = function() {
 		
-		// check homepage card
+		// check object
 		if ( $( '.slider-component' ).length ) {
-				
+			
+			// check if this el is initialized by slick already, if it hasn't been initialized then initialize it
 			!$( '.slider-component' ).hasClass( 'slick-initialized' ) ? SlickHelper( '.slider-component' ) : '';
 		}
 	}
-
+	
+	// method to initalize hero element init value
 	const initHero = function() {
-
-		// check sliderTop margin
+		
+		// check object
 		if ( $( '.slider-component' ).length ) {
-
-			const getTop = $( '.navigation-component' ).outerHeight();
-
-			console.log( getTop*-1 );
 			
+			const getTop = $( '.navigation-component' ).outerHeight();
+			
+			// set default margin-top value for this el
 			$( '.slider-component' ).css('margin-top', -1*getTop);
 		}
-
+		
+		// check object
 		if ( $( '.steps-component' ).length ) {
-
+			
 			const getTop = $( '.steps-component' ).outerHeight();
 			
+			// set default bottom value for this el
 			$( '.steps-component' ).css('bottom', getTop/-2);
+		}
+	}
+	
+	const initPlans = function() {
+		
+		// check object
+		if ( $( '.plans-component' ).length ) {
+			
+			// on hover 
+			$( '.plan' ).on('mouseenter mouseleave', function(){
+				
+				// remove active class
+				$(this).siblings('.plan').removeClass('active');
+				
+				// add active class to hovered el
+				$(this).addClass('active');
+			});
+			
+			// set default height value for plans-component to avoid weird transition effect
+			$( '.plans-component' ).height( $('.plan.active').outerHeight());
+			
+			// on leave, set active plan to plan at the middle
+			$( '.plans-component' ).on('mouseleave', function(e){
+				
+				// if target isn't plan, then execute
+				if (e.target != $('.plan') ){
+					
+					$('.plan').removeClass('active');
+					$('.plan:nth-child(2)').addClass('active');
+				}
+				
+			})
+		}
+	}
+	
+	// method to initialize tab-component
+	const initTab = function() {
+		
+		// check object
+		if ( $( '.tabs-component' ).length ) {
+			
+			const el  = $('.tabs-component');
+			
+			el.find('.tab-head').first().addClass('active');
+			el.find('.tab-body').first().addClass('active');
+			el.height( el.find('.tab-body').first().outerHeight());
+			
+			el.find('.tab-head').each(function(i,e){
+
+				$(this).text( $(this).text().trimToLength('40'));
+				
+				$(this).attr('data-id',`#tabs-${i}`);
+			})
+			
+			el.find('.tab-body').each(function(i,e){
+				
+				$(this).attr('id',`tabs-${i}`);
+
+				// $(this).outerHeight() > el.outerHeight() ? el.height( $(this).height() ) : '';
+			})
+			
+			el.on('click', '.tab-head' ,function(e){
+				el.find('.active').removeClass('active');
+				$(this).addClass('active');
+				
+				$( $(this).data('id') ).addClass('active');
+
+				el.height( $( $(this).data('id') ).outerHeight() );
+			})
 		}
 	}
 	
@@ -114,8 +197,8 @@ FreeEng.UIComponents = function( customSetting ) {
 			// initMinimizeHeader();
 			
 			// initSlick();
-
-			initSliderTop();
+			
+			initHero();
 			
 		});
 	}

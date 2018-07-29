@@ -32,7 +32,8 @@ header {
 
 				a {
 					@include underline;
-					font-size: 1.2rem;
+					font-size: 1.3rem;
+					font-weight: 700;
 					color: white;
 				}
 			}
@@ -40,8 +41,10 @@ header {
 
 		.social-medias {
 			.social {
-				img {
+				img,svg {
 					height: 20px;
+					width: 20px;
+					fill: white;
 				}
 
 				+ .social {
@@ -66,8 +69,9 @@ header {
 			.nav-logo {
 				margin: 0 40px;
 
-				img {
-					height: 85px;
+				img,svg {
+					width: 107px;
+					fill: white;
 				}
 			}
 
@@ -75,13 +79,14 @@ header {
 				a {
 					@include underline;
 					color: white;
-					font-size: 1.4rem;
+					font-size: 1.35rem;
 					letter-spacing: 1px;
 				}
 
 				&.squared {
 					border: 1px solid white;
 					padding: 6px 15px;
+					border-radius: 20px;
 
 					a {
 						@include reset-underline;

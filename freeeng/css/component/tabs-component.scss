@@ -1,0 +1,142 @@
+.tabs-component {
+    display: flex;
+    transition: all .3s;
+
+    .tab-h {
+        flex: 1 1 32vw;   
+        
+        .tab-head {
+            background: #ededed;
+            color: #333;
+            transition: all .3s;
+            position: relative;
+            padding: 10px 40px 10px 80px;
+            font-size: 1.8rem;
+            font-weight: 700;
+            height: 70px;
+            line-height: 25px;
+            border-top-left-radius: 35px;
+            border-bottom-left-radius: 35px;
+            display: flex;
+            align-items: center;
+
+            + .tab-head {
+                margin: 20px 0 0 0;
+            }
+            
+            &::before {
+                content: '';
+                position: absolute;
+                left: 27px;
+                top: 50%;
+                transform: translateY(-50%) rotate(45deg);
+                z-index: 3;
+                width: 16px;
+                height: 16px;
+                display: inline-block;
+                border-top: 3px solid #c7c7c7;
+                border-right: 3px solid #c7c7c7;
+            }
+            
+            &::after {
+                content: '';
+                position: absolute;
+                z-index: 2;
+                left: 14px;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                background: white;
+            }
+            
+            &.active {
+                background: $main;
+                color: white;
+                text-transform: uppercase;
+                
+                &::before {
+                    border-top-color: $second;
+                    border-right-color: $second;
+                }
+            }
+        }
+    }
+    
+    .tab-b {
+        flex: 1 1 68vw;
+        position: relative;
+
+        .tab-body {
+            position: absolute;
+            top: 0;
+            z-index: -1;
+            transition: all .3s;
+            opacity: 0;
+            visibility: hidden;
+            background: #4fc753;
+            color: white;
+            font-size: 1.8rem;
+            padding: 18px 28px;
+            
+            .question {
+                margin: 0 0 10px;
+
+                &::before {
+                    content: 'Q :';
+                    margin: 0 5px 0 0;
+                    font-weight: 900;
+                    font-size: 2rem;
+                }
+            }
+            
+            .answer {
+                &::before {
+                    content: 'A :';
+                    margin: 0 5px 0 0;
+                    font-weight: 900;
+                    font-size: 2rem;
+                }
+            }
+            
+            &.active {
+                z-index: 2;
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+}
+
+@media (max-width:1366px) {
+    .tabs-component {
+        
+    }
+}
+
+
+// desktop normal and tablet landscape ( max-width 1199px )
+@include media-breakpoint-down(lg) {
+    section {
+    }
+}
+
+// desktop small and tablet potrait ( max-width 991px )
+@include media-breakpoint-down(md) {
+    section {
+        
+    }
+}
+
+// mobile potrait and landscape ( max-width 767px )
+@include media-breakpoint-down(sm) {
+    section {
+        
+    }
+}
+
+//small mobile (max-width 480px)
+@include media-breakpoint-down(xs) {
+    
+}
