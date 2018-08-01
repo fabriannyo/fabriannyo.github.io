@@ -55,6 +55,8 @@ FreeEng.UIComponents = function( customSetting ) {
 		initPlans();
 		
 		initTab();
+
+		initResponsive();
 	}
 	
 	// const initHeader = function() {
@@ -63,6 +65,32 @@ FreeEng.UIComponents = function( customSetting ) {
 	// 		$( document ).scrollTop() > 40 ? $( 'header' ).addClass( 'minimize' ) : '';
 	// 	}
 	// }
+
+
+	const initResponsive = function() {
+
+		if ( $('header').length ) {
+
+			// clone logo for responsive
+			$('.nav-logo a').clone().appendTo('header').addClass('logo-mobile');
+
+			// event for mobile trigger
+			$('.mobile-trigger').on('click',function(){
+
+				$(this).toggleClass('opened closed');
+				$('.navigation-component').toggleClass('opened closed');
+				$('body').toggleClass('static');
+			});
+
+			// event for closing menu if user click outside target
+			$('body').on('click', function(e){
+
+				if ( !$('.navigation-component').is(e.target) && $('.navigation-component').has(e.target).length === 0 && !$('.mobile-trigger').is(e.target) && $('.mobile-trigger').has(e.target).length === 0  ) {
+					$('.mobile-trigger').hasClass('opened') ? $('.mobile-trigger').trigger('click') : '';
+				}
+			})
+		}
+	}
 	
 	// slick initiate helper
 	function SlickHelper( elements ) {
@@ -97,7 +125,7 @@ FreeEng.UIComponents = function( customSetting ) {
 	const initHero = function() {
 		
 		// check object
-		if ( $( '.slider-component' ).length ) {
+		if ( $( '.slider-component' ).length && !settings.tablet && !settings.mobile ) {
 			
 			const getTop = $( '.navigation-component' ).outerHeight();
 			
@@ -106,7 +134,7 @@ FreeEng.UIComponents = function( customSetting ) {
 		}
 		
 		// check object
-		if ( $( '.steps-component' ).length ) {
+		if ( $( '.steps-component' ).length && !settings.tablet && !settings.mobile ) {
 			
 			const getTop = $( '.steps-component' ).outerHeight();
 			
@@ -131,7 +159,7 @@ FreeEng.UIComponents = function( customSetting ) {
 			});
 			
 			// set default height value for plans-component to avoid weird transition effect
-			$( '.plans-component' ).height( $('.plan.active').outerHeight());
+			plansRecheck();
 			
 			// on leave, set active plan to plan at the middle
 			$( '.plans-component' ).on('mouseleave', function(e){
@@ -145,6 +173,12 @@ FreeEng.UIComponents = function( customSetting ) {
 				
 			})
 		}
+
+		
+	}
+
+	function plansRecheck() {
+		!settings.mobile ? $( '.plans-component' ).height( $('.plan.active').outerHeight()) : '';
 	}
 	
 	// method to initialize tab-component
@@ -152,12 +186,12 @@ FreeEng.UIComponents = function( customSetting ) {
 		
 		// check object
 		if ( $( '.tabs-component' ).length ) {
-			
+
 			const el  = $('.tabs-component');
 			
 			el.find('.tab-head').first().addClass('active');
 			el.find('.tab-body').first().addClass('active');
-			el.height( el.find('.tab-body').first().outerHeight());
+			!settings.mobile ? el.height( el.find('.tab-body').first().outerHeight()) : $('.tab-b').height( el.find('.tab-body').first().outerHeight());
 			
 			el.find('.tab-head').each(function(i,e){
 
@@ -176,12 +210,21 @@ FreeEng.UIComponents = function( customSetting ) {
 			el.on('click', '.tab-head' ,function(e){
 				el.find('.active').removeClass('active');
 				$(this).addClass('active');
-				
-				$( $(this).data('id') ).addClass('active');
 
-				el.height( $( $(this).data('id') ).outerHeight() );
+				let linkedBody = $( $(this).data('id') );
+				
+				linkedBody.addClass('active');
+
+				!settings.mobile ? el.height( linkedBody.outerHeight() ) : $('.tab-b').height( linkedBody.outerHeight() );
 			})
 		}
+	}
+
+	function tabsRecheck(){
+
+		const el  = $('.tabs-component');
+			
+		!settings.mobile ? el.height( el.find('.tab-body.active').outerHeight()) : $('.tab-b').height( el.find('.tab-body.active').outerHeight());
 	}
 	
 	// method to re-init function when browser is resized
@@ -194,9 +237,9 @@ FreeEng.UIComponents = function( customSetting ) {
 			// check mobile
 			$( window ).width() <= settings.mobileBreakpoint ? settings.mobile = true : settings.mobile = false;
 			
-			// initMinimizeHeader();
+			plansRecheck();
 			
-			// initSlick();
+			tabsRecheck();
 			
 			initHero();
 			

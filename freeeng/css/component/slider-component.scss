@@ -103,34 +103,118 @@
     }
 }
 
-@media (max-width:1366px) {
-   .slider-component {
+@media (min-width:1400px) {
+    .slider-component {
+        .slider-wrap {
+            .slider-img {
+                height: calc(100vh - 34px);
 
-   }
+                img {
+                    height: calc(100vh - 34px);
+                    object-fit: cover;
+                }
+            }
+        }
+    }
 }
 
 
 // desktop normal and tablet landscape ( max-width 1199px )
 @include media-breakpoint-down(lg) {
-    section {
+    .slider-component {
+        margin: 70px 0 0 0;
+
+        .slider-wrap {
+            .slider-text {
+                top: 50%;
+                transform: translate(-50%,-50%);
+            }
+        }
+
+        .slick-dots {
+            bottom: 20px;
+        }
     }
 }
 
 // desktop small and tablet potrait ( max-width 991px )
 @include media-breakpoint-down(md) {
-    section {
-        
+    .slider-component {
+        margin: 70px 0 0 0;
+
+        .slider-wrap {
+            .slider-text {
+                top: 50%;
+                transform: translate(-50%,-50%);
+
+                .slider-button {
+                    flex-wrap: wrap;
+
+                    .btn {
+                        width: 100%;
+
+                        + .btn {
+                            margin: 10px 0 0 0;
+                        }
+                    }
+                }
+            }
+            
+        }
     }
 }
 
 // mobile potrait and landscape ( max-width 767px )
 @include media-breakpoint-down(sm) {
-    section {
-        
+    .slider-component {
+        margin: 70px 0 0 0;
+
+        .slider-wrap {
+            .slider-text {
+                position: static;
+                transform: none;
+                margin: 0;
+                padding: 20px 20px 40px;
+
+                .subtitle,.title {
+                    color: $main;
+                    white-space: pre-wrap;
+                    text-align: left;
+                    letter-spacing: 1px;
+                }
+
+                .slider-button {
+                    margin: 0;
+                    flex-wrap: wrap;
+
+                    .btn {
+                        width: 100%;
+                        
+                        + .btn {
+                            margin: 10px 0 0 0;
+                        }
+                    }
+                }
+            }
+        }
+
+        .slick-dots {
+            li {
+                button {
+                    background: #dfdfdf;
+                }
+            }
+        }
     }
 }
 
 //small mobile (max-width 480px)
 @include media-breakpoint-down(xs) {
-    
+    .slider-component {
+        .slider-wrap {
+            .slider-text {
+                padding: 20px 20px 50px;
+            }
+        }
+    }    
 }

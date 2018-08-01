@@ -109,7 +109,7 @@
     }
 }
 
-@media (max-width:1366px) {
+@media (max-width:1400px) {
     .tabs-component {
         
     }
@@ -118,25 +118,60 @@
 
 // desktop normal and tablet landscape ( max-width 1199px )
 @include media-breakpoint-down(lg) {
-    section {
+    .tabs-component {
+        
     }
 }
 
 // desktop small and tablet potrait ( max-width 991px )
 @include media-breakpoint-down(md) {
-    section {
-        
+    .tabs-component {
+        .tab-h {
+            flex: 1 1 50vw;
+        }
+
+        .tab-b {
+            flex: 1 1 50vw;
+        }
     }
 }
 
 // mobile potrait and landscape ( max-width 767px )
 @include media-breakpoint-down(sm) {
-    section {
-        
+    .tabs-component {
+        display: block;
+
+        .tab-h {
+
+            .tab-head {
+                border-radius: 35px;
+
+                &::before {
+                    transform: translateY(-65%) rotate(135deg);
+                    left: 31px;
+                }
+
+                +.tab-head {
+                    margin-top: 5px;
+                }
+            }
+        }
+
+        .tab-b {
+            margin: 10px 0 0 0;
+
+            .tab-body {
+                .question , .answer {
+                    font-size: 2rem;
+                }
+            }
+        }
     }
 }
 
 //small mobile (max-width 480px)
 @include media-breakpoint-down(xs) {
-    
+    .tabs-component {
+        
+    }
 }

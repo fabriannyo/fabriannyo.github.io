@@ -38,40 +38,45 @@ body.revamp {
 	
 	// main section
 	main[ role="main" ] {
-		// margin-top: 160px;
-		// anticipate page that has very few content ( short height )
-		// to avoid hanging footer
-		// min-height: calc(100vh - 545px);
-		// position: relative;
 		
-		// &.minimize {
-			// 	margin-top: 120px;
-			// }
-			//
-			// .container {
-				// 	position: relative;
-				// }
-				
-				// @import "default/contents.scss";
-				
-				// each page style goes here
-				// example : @import "pages/homepage"
-				@import "pages/homepage-1.scss";
-				@import "pages/homepage.scss";
-			}
-			
-			
-			// footer section
-			@import "component/footer.scss";
-			
-			// default style
-			@import "default/default.scss";
-			
-			// responsive style
-			@import "responsive/responsive.scss";
-			
-			// media print style
-			@import "print/print.scss";
-			
-		}
-		
+		// each page style goes here
+		// example : @import "pages/homepage"
+		@import "pages/homepage-1.scss";
+		@import "pages/homepage.scss";
+	}
+	
+	
+	// footer section
+	@import "component/footer.scss";
+	
+	// default style
+	@import "default/default.scss";
+	
+	// responsive style
+	@import "responsive/responsive.scss";
+	
+	// media print style
+	@import "print/print.scss";
+	
+}
+
+@include media-breakpoint-down(lg) {
+	html {
+		font-size: 9px;
+	}
+}
+
+@include media-breakpoint-down(md) {
+	html {
+		font-size: 8px;
+	}
+}
+
+@include media-breakpoint-down(sm) {
+	html {
+		font-size: 7px;
+	}
+}
+@include media-breakpoint-down(xs) {
+	
+}

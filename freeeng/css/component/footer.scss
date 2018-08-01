@@ -155,6 +155,23 @@ footer {
 @include media-breakpoint-down(lg) {
 	
 	footer {
+		.footer-bottom {
+			.copyright {
+				a {
+					&::before {
+						top: 1px;
+					}
+				}
+			}
+
+			.sign {
+				a + a {
+					&::before {
+						top: 2px;
+					}
+				}
+			}
+		}
 		
 	}
 }
@@ -162,17 +179,116 @@ footer {
 // desktop small and tablet potrait ( max-width 991px )
 @include media-breakpoint-down(md) {
 	
+	footer {
+		.footer-top {
+			padding: 20px 0 30px;
+
+			.container {
+				flex-wrap: wrap;
+			}
+
+			.logo-component {
+				width: 100%;
+				margin: 0 0 30px;
+				text-align: center;
+
+				img {
+					height: 90px;
+					width: auto;
+				}
+			}
+		}		
+	}
 }
 
 // mobile potrait and landscape ( max-width 767px )
 @include media-breakpoint-down(sm) {
 	
 	footer {
+
+		.footer-bottom {
+			.copyright {
+				a {
+					&::before {
+						top: 1px;
+					}
+				}
+			}
+
+			.sign {
+				a + a {
+					&::before {
+						top: 2px;
+					}
+				}
+			}
+		}
 		
 	}
 }
 
 //small mobile (max-width 480px)
 @include media-breakpoint-down(xs) {
-	
+	footer {
+
+		.footer-top {
+			.info-component {
+				.contacts {
+					flex-wrap: wrap;
+					width: 80%;
+					margin: auto;
+
+					.contact {
+						width: 100%;
+						justify-content: center;
+						margin: 0;
+
+						+ .contact {
+							margin: 10px 0 0 0;
+						}
+					}
+				}
+
+				.foot-nav {
+					flex-wrap: wrap;
+					justify-content: center;
+
+					a {
+						font-size: 1.8rem;
+						margin: 0 10px 10px;
+					}
+				}
+			}
+		}
+
+		.footer-bottom {
+			.container {
+				flex-wrap: wrap;
+			}
+
+			.copyright {
+				width: 100%;
+				text-align: center;
+
+				a {
+					&::before {
+						top: 1px;
+					}
+				}
+			}
+
+			.sign {
+				width: 100%;
+				text-align: center;
+				margin: 10px 0 0 0;
+
+				a + a {
+					&::before {
+						top: 2px;
+					}
+				}
+			}
+		}
+		
+	}
 }

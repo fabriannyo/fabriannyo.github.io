@@ -78,14 +78,14 @@
 		transform: rotate(0);
 	}
 	100% {
-		top: 46%;
+		top: 43%;
 		transform: rotate(45deg);
 	}
 }
 
 @keyframes closedTopAnim {
 	0% {
-		top: 46%;
+		top: 43%;
 		transform: rotate(45deg);
 	}
 	50% {
@@ -108,14 +108,14 @@
 		transform: rotate(0);
 	}
 	100% {
-		bottom: 46%;
+		bottom: 53%;
 		transform: rotate(-45deg);
 	}
 }
 
 @keyframes closedBotAnim {
 	0% {
-		bottom: 46%;
+		bottom: 53%;
 		transform: rotate(-45deg);
 	}
 	50% {
@@ -558,6 +558,22 @@ blockquote {
 	padding: 0;
 }
 
+&.static {
+	overflow-y: hidden;
+
+	&::before {
+		content:'';
+		display: block;
+		background: transparentize($grey, .2);
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: 9;
+	}
+}
+
 @include media-breakpoint-down(lg) {
 	.search-group {
 		width: 100%;
@@ -626,6 +642,11 @@ blockquote {
 				right: 10px;
 			}
 		}
+	}
+
+	.container {
+		max-width: 90%;
+		width: 90%;
 	}
 }
 @include media-breakpoint-down(xs) {
