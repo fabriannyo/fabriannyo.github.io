@@ -56,6 +56,7 @@
                 font-size: 1.7rem;
                 letter-spacing: 4px;
                 padding: 13px 45px;
+                text-align: center;
             }
             
             .btn + .btn {
@@ -181,6 +182,11 @@
                     white-space: pre-wrap;
                     text-align: left;
                     letter-spacing: 1px;
+                }
+
+                .subtitle + .title {
+                    line-height: 1.2;
+                    margin-bottom: 17px;
                 }
 
                 .slider-button {

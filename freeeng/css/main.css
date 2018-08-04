@@ -2024,7 +2024,8 @@ body.revamp {
           font-weight: 700;
           font-size: 1.7rem;
           letter-spacing: 4px;
-          padding: 13px 45px; }
+          padding: 13px 45px;
+          text-align: center; }
         body.revamp .slider-component .slider-wrap .slider-button .btn + .btn {
           margin: 0 0 0 10px; }
     body.revamp .slider-component .slick-dots {
@@ -2110,6 +2111,9 @@ body.revamp {
           white-space: pre-wrap;
           text-align: left;
           letter-spacing: 1px; }
+        body.revamp .slider-component .slider-wrap .slider-text .subtitle + .title {
+          line-height: 1.2;
+          margin-bottom: 17px; }
         body.revamp .slider-component .slider-wrap .slider-text .slider-button {
           margin: 0;
           -ms-flex-wrap: wrap;
