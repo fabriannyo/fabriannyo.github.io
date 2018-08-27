@@ -21,9 +21,9 @@
     <!-- script-->
   </head>
   <!-- body-->
-  <body class="revamp">
+  <body>
     <!-- page header-->
-    <header>
+    <header class="header-revamp">
       <div class="info-component">
         <div class="container">
           <div class="contacts">
@@ -35,14 +35,25 @@
       </div>
       <nav class="navigation-component closed">
         <div class="container">
-          <ul class="nav">
+          <ul class="navi">
             <li class="nav-item"><a href="#">HOME</a></li>
             <li class="nav-item"><a href="#">OUR STORY</a></li>
             <li class="nav-item"><a href="#">HOW CAN WE HELP</a></li>
-            <li class="nav-item"><a href="#">WHY SOLAR</a></li>
+            <li class="nav-item has-sub closed"><a href="#">WHY SOLAR</a>
+              <ul>
+                <li class="nav-item-level2"><a href="#">WHY RESIDENT SOLAR</a></li>
+                <li class="nav-item-level2"><a href="#">WHY COMMERCIAL SOLAR</a></li>
+              </ul>
+            </li>
             <li class="nav-logo"><a href="#"><img src="img/ui/logo.svg"></a></li>
             <li class="nav-item"><a href="#">CONNECT WITH US</a></li>
-            <li class="nav-item"><a href="#">REFERENCES</a></li>
+            <li class="nav-item has-sub closed"><a href="#">REFERENCES</a>
+              <ul>
+                <li class="nav-item-level2"><a href="#">BLOG</a></li>
+                <li class="nav-item-level2"><a href="#">TESTIMONIAL</a></li>
+                <li class="nav-item-level2"><a href="#">FAQs</a></li>
+              </ul>
+            </li>
             <li class="nav-item"><a href="#">LOGIN</a></li>
             <li class="nav-item squared"><a href="#">QUOTE</a></li>
           </ul>
@@ -53,233 +64,235 @@
       </div>
     </header>
     <!-- page main-->
-    <main role="main">
-      <section class="hero">
-        <div class="slider-component">
-          <div class="slider-wrap">
-            <div class="slider-img"><img data-lazy="img/content/carousel-03.jpg"></div>
-            <div class="slider-text">
-              <h2 class="subtitle">Engineers helping you save money <br/>and time in finding the best solar deal. </h2>
-              <div class="slider-button"><a class="btn btn-main" href="#">HOW IT WORKS</a><a class="btn btn-second" href="#">SAVING CALCULATOR</a></div>
+    <div class="section-page">
+      <div class="main-revamp">
+        <section class="hero">
+          <div class="slider-component">
+            <div class="slider-wrap">
+              <div class="slider-img"><img data-lazy="img/content/carousel-03.jpg"></div>
+              <div class="slider-text">
+                <h2 class="subtitle">Engineers helping you save money <br/>and time in finding the best solar deal. </h2>
+                <div class="slider-button"><a class="cbtn cbtn-main" href="#">HOW IT WORKS</a><a class="cbtn cbtn-second" href="#">SAVING CALCULATOR</a></div>
+              </div>
+            </div>
+            <div class="slider-wrap">
+              <div class="slider-img"><img data-lazy="img/content/carousel-02.jpg"></div>
+              <div class="slider-text">
+                <h2 class="subtitle">Engineers helping you save money <br/>and time in finding the best solar deal. </h2>
+                <div class="slider-button"><a class="cbtn cbtn-main" href="#">HOW IT WORKS</a><a class="cbtn cbtn-second" href="#">SAVING CALCULATOR</a></div>
+              </div>
+            </div>
+            <div class="slider-wrap">
+              <div class="slider-img"><img data-lazy="img/content/carousel-01.jpg"></div>
+              <div class="slider-text">
+                <h2 class="subtitle">We Research Your Best Solar Deal</h2>
+                <h2 class="title">For Free</h2>
+                <div class="slider-button"><a class="cbtn cbtn-main" href="#">HOW IT WORKS</a><a class="cbtn cbtn-second" href="#">SAVING CALCULATOR</a></div>
+              </div>
             </div>
           </div>
-          <div class="slider-wrap">
-            <div class="slider-img"><img data-lazy="img/content/carousel-02.jpg"></div>
-            <div class="slider-text">
-              <h2 class="subtitle">Engineers helping you save money <br/>and time in finding the best solar deal. </h2>
-              <div class="slider-button"><a class="btn btn-main" href="#">HOW IT WORKS</a><a class="btn btn-second" href="#">SAVING CALCULATOR</a></div>
+          <div class="steps-component">
+            <div class="container">
+              <div class="step">
+                <div class="no">
+                  <p>1</p><img src="img/ui/ic-step-01.svg">
+                </div>
+                <div class="description">
+                  <p>Contact us with what you want</p>
+                </div>
+              </div>
+              <div class="step">
+                <div class="no">
+                  <p>2</p><img src="img/ui/ic-step-02.svg">
+                </div>
+                <div class="description">
+                  <p>We help you make energy & solar simple</p>
+                </div>
+              </div>
+              <div class="step">
+                <div class="no">
+                  <p>3</p><img src="img/ui/ic-step-03.svg">
+                </div>
+                <div class="description">
+                  <p>Our engineers assess & develop the solutions</p>
+                </div>
+              </div>
+              <div class="step">
+                <div class="no">
+                  <p>4</p><img src="img/ui/ic-step-04.svg">
+                </div>
+                <div class="description">
+                  <p>We find you up to 3 trusted competitive suppliers</p>
+                </div>
+              </div>
+              <div class="step">
+                <div class="no">
+                  <p>5</p><img src="img/ui/ic-step-05.svg">
+                </div>
+                <div class="description">
+                  <p>You have the final say, with our support</p>
+                </div>
+              </div>
+              <div class="step">
+                <div class="no">
+                  <p>6</p><img src="img/ui/ic-step-06.svg">
+                </div>
+                <div class="description">
+                  <p>Installation we support you with site visits</p>
+                </div>
+              </div>
+              <div class="step">
+                <div class="no">
+                  <p>7</p><img src="img/ui/ic-step-07.svg">
+                </div>
+                <div class="description">
+                  <p>We verify the saving after install	</p>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="slider-wrap">
-            <div class="slider-img"><img data-lazy="img/content/carousel-01.jpg"></div>
-            <div class="slider-text">
-              <h2 class="subtitle">We Research Your Best Solar Deal</h2>
-              <h2 class="title">For Free</h2>
-              <div class="slider-button"><a class="btn btn-main" href="#">HOW IT WORKS</a><a class="btn btn-second" href="#">SAVING CALCULATOR</a></div>
+        </section>
+        <section class="reasons">
+          <div class="reason-component">
+            <div class="img-wrap"><img src="img/content/reason-01.jpg"></div>
+            <div class="body-wrap">
+              <h2 class="title">Why Use<br/>Free Engineer?</h2>
+              <div class="description">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut libero est, facilisis vel odio ut, bibendum dapibus risus. Fusce consectetur auctor magna vel vestibulum. Maecenas dui enim, suscipit quis tortor quis, auctor dapibus sem. Curabitur vehicula faucibus eleifend. Sed et mi eget tortor euismod fringilla. Nam in egesttas odio. Vestibulum ipsum</p>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="steps-component">
+          <div class="reason-component">
+            <div class="body-wrap">
+              <h2 class="title">Buy or Lease?</h2><a class="cbtn cbtn-main" href="#">let us help you decide</a>
+            </div>
+            <div class="img-wrap"><img src="img/content/reason-02.jpg"></div>
+          </div>
+        </section>
+        <section class="plans">
           <div class="container">
-            <div class="step">
-              <div class="no">
-                <p>1</p><img src="img/ui/ic-step-01.svg">
+            <h2 class="section-title">Save Up To<br/>60% On Your Power</h2>
+            <div class="plans-component">
+              <div class="plan">
+                <div class="title">RESIDENTIAL</div>
+                <ul>
+                  <li>Super Long Feature Item</li>
+                  <li>Feature Item</li>
+                  <li>Super Long Feature Item</li>
+                  <li>Long Feature</li>
+                  <li>Feature Item</li>
+                </ul><a class="cbtn cbtn-main-o" href="#">Enquire now</a>
               </div>
-              <div class="description">
-                <p>Contact us with what you want</p>
+              <div class="plan active">
+                <div class="title">RESIDENTIAL</div>
+                <ul>
+                  <li>Super Long Feature Item</li>
+                  <li>Feature Item</li>
+                  <li>Super Long Feature Item</li>
+                  <li>Long Feature</li>
+                  <li>Feature Item</li>
+                </ul><a class="cbtn cbtn-main-o" href="#">Enquire now</a>
               </div>
-            </div>
-            <div class="step">
-              <div class="no">
-                <p>2</p><img src="img/ui/ic-step-02.svg">
-              </div>
-              <div class="description">
-                <p>We help you make energy & solar simple</p>
-              </div>
-            </div>
-            <div class="step">
-              <div class="no">
-                <p>3</p><img src="img/ui/ic-step-03.svg">
-              </div>
-              <div class="description">
-                <p>Our engineers assess & develop the solutions</p>
-              </div>
-            </div>
-            <div class="step">
-              <div class="no">
-                <p>4</p><img src="img/ui/ic-step-04.svg">
-              </div>
-              <div class="description">
-                <p>We find you up to 3 trusted competitive suppliers</p>
-              </div>
-            </div>
-            <div class="step">
-              <div class="no">
-                <p>5</p><img src="img/ui/ic-step-05.svg">
-              </div>
-              <div class="description">
-                <p>You have the final say, with our support</p>
-              </div>
-            </div>
-            <div class="step">
-              <div class="no">
-                <p>6</p><img src="img/ui/ic-step-06.svg">
-              </div>
-              <div class="description">
-                <p>Installation we support you with site visits</p>
-              </div>
-            </div>
-            <div class="step">
-              <div class="no">
-                <p>7</p><img src="img/ui/ic-step-07.svg">
-              </div>
-              <div class="description">
-                <p>We verify the saving after install	</p>
+              <div class="plan">
+                <div class="title">RESIDENTIAL</div>
+                <ul>
+                  <li>Super Long Feature Item</li>
+                  <li>Feature Item</li>
+                  <li>Super Long Feature Item</li>
+                  <li>Long Feature</li>
+                  <li>Feature Item</li>
+                </ul><a class="cbtn cbtn-main-o" href="#">Enquire now</a>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-      <section class="reasons">
-        <div class="reason-component">
-          <div class="img-wrap"><img src="img/content/reason-01.jpg"></div>
-          <div class="body-wrap">
-            <h2 class="title">Why Use<br/>Free Engineer?</h2>
-            <div class="description">
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut libero est, facilisis vel odio ut, bibendum dapibus risus. Fusce consectetur auctor magna vel vestibulum. Maecenas dui enim, suscipit quis tortor quis, auctor dapibus sem. Curabitur vehicula faucibus eleifend. Sed et mi eget tortor euismod fringilla. Nam in egesttas odio. Vestibulum ipsum</p>
-            </div>
-          </div>
-        </div>
-        <div class="reason-component">
-          <div class="body-wrap">
-            <h2 class="title">Buy or Lease?</h2><a class="btn btn-main" href="#">let us help you decide</a>
-          </div>
-          <div class="img-wrap"><img src="img/content/reason-02.jpg"></div>
-        </div>
-      </section>
-      <section class="plans">
-        <div class="container">
-          <h2 class="section-title">Save Up To<br/>60% On Your Power</h2>
-          <div class="plans-component">
-            <div class="plan">
-              <div class="title">RESIDENTIAL</div>
-              <ul>
-                <li>Super Long Feature Item</li>
-                <li>Feature Item</li>
-                <li>Super Long Feature Item</li>
-                <li>Long Feature</li>
-                <li>Feature Item</li>
-              </ul><a class="btn btn-main-o" href="#">Enquire now</a>
-            </div>
-            <div class="plan active">
-              <div class="title">RESIDENTIAL</div>
-              <ul>
-                <li>Super Long Feature Item</li>
-                <li>Feature Item</li>
-                <li>Super Long Feature Item</li>
-                <li>Long Feature</li>
-                <li>Feature Item</li>
-              </ul><a class="btn btn-main-o" href="#">Enquire now</a>
-            </div>
-            <div class="plan">
-              <div class="title">RESIDENTIAL</div>
-              <ul>
-                <li>Super Long Feature Item</li>
-                <li>Feature Item</li>
-                <li>Super Long Feature Item</li>
-                <li>Long Feature</li>
-                <li>Feature Item</li>
-              </ul><a class="btn btn-main-o" href="#">Enquire now</a>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="faq">
-        <div class="container">
-          <h2 class="section-title">Get It Done Without The Headaches</h2>
-          <h3 class="section-subtitle">FREQUENTLY ASKED QUESTIONS</h3>
-          <div class="tabs-component">
-            <div class="tab-h">
-              <div class="tab-head">Test Title Pendek</div>
-              <div class="tab-head">Donec Vel Mauris Eget Enim Sagitis Ullam</div>
-              <div class="tab-head">Donec Vel Mauris Eget Enim Sagitis Ullam Lorem Ipsum Lorem Dolor</div>
-              <div class="tab-head">Donec Vel Mauris Eget Enim</div>
-            </div>
-            <div class="tab-b">
-              <div class="tab-body">
-                <div class="question">Donec vel mauris eget enim sagittis ullamcorper id vitae augue. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam fermentum ultrices velit, at faucibus orci vestibulum sed. Proin id varius mauris. Donec eget eros purus. Nam lorem nulla, mattis id cursus ac, lacinia eget purus. Quisque si</div>
-                <div class="answer">orem ipsum dolor sit amet, consectetur adipiscing elit. Integer non lorem turpis. Ut consectetur fringilla sapien sagittis feugiat. Ut venenatis ipsum felis, eget feugiat augue laoreet in. Sed a lectus enim. Ut nunc nisi, rutrum quis tincidunt sit amet, dignissim et nibh. Quisque scelerisque, erat vitae dapibus ornare, neque tortor eleifend diam, in hendrerit turpis erat eu dolor. Vestibulum at justo vel nunc fermentum rhoncus. Vestibulum placerat lobortis laoreet. Etiam euismod sodales lacus et vulputate. Integer consectetur neque neque, consequat varius neque pulvinar quis. Morbi nec viverra massa, nec eleifend lectus. In mattis lorem quis tellus volutpat, ac semper purus lacinia. Nunc velit augue, molestie ac sapien nec,</div>
+        </section>
+        <section class="faq">
+          <div class="container">
+            <h2 class="section-title">Get It Done Without The Headaches</h2>
+            <h3 class="section-subtitle">FREQUENTLY ASKED QUESTIONS</h3>
+            <div class="tabs-component">
+              <div class="tab-h">
+                <div class="tab-head">Test Title Pendek</div>
+                <div class="tab-head">Donec Vel Mauris Eget Enim Sagitis Ullam</div>
+                <div class="tab-head">Donec Vel Mauris Eget Enim Sagitis Ullam Lorem Ipsum Lorem Dolor</div>
+                <div class="tab-head">Donec Vel Mauris Eget Enim</div>
               </div>
-              <div class="tab-body">
-                <div class="question">orem ipsum dolor sit amet, consectetur adipiscing elit. Integer non lorem turpis. Ut consectetur fringilla sapien sagittis feugiat. Ut venenatis ipsum felis, eget feugiat augue laoreet in. Sed a lectus enim. Ut nunc nisi, rutrum quis tincidunt sit amet, dignissim et nibh. Quisque scelerisque, erat vitae dapibus ornare, neque tortor eleifend diam, in hendrerit turpis erat eu dolor. Vestibulum at justo vel nunc fermentum rhoncus. Vestibulum placerat lobortis laoreet. Etiam euismod sodales lacus et vulputate. Integer consectetur neque neque, consequat varius neque pulvinar quis. Morbi nec viverra massa, nec eleifend lectus. In mattis.</div>
-                <div class="answer">orem ipsum dolor sit amet, consectetur adipiscing elit. Integer non lorem turpis. Ut consectetur fringilla sapien sagittis feugiat. Ut venenatis ipsum felis, eget feugiat augue laoreet in. Sed a lectus enim. Ut nunc nisi, rutrum quis tincidunt sit amet, dignissim et nibh. Quisque scelerisque, erat vitae dapibus ornare, neque tortor eleifend diam, in hendrerit turpis erat eu dolor. Vestibulum at justo vel nunc fermentum rhoncus. Vestibulum placerat lobortis laoreet. Etiam euismod sodales lacus et vulputate. Integer consectetur neque neque, consequat varius neque pulvinar quis. Morbi nec viverra massa, nec eleifend lectus. In mattis.</div>
-              </div>
-              <div class="tab-body">
-                <div class="question">orem ipsum dolor sit amet, consectetur adipiscing elit. Integer non lorem turpis. Ut consectetur fringilla sapien sagittis feugiat. Ut venenatis ipsum felis, eget feugiat augue laoreet in. Sed a lectus enim. Ut nunc nisi, rutrum quis tincidunt sit amet, dignissim et nibh. Quisque scelerisque, erat vitae dapibus ornare, neque tortor eleifend diam, in hendrerit turpis erat eu dolor. Vestibulum at justo vel nunc fermentum rhoncus. Vestibulum placerat lobortis laoreet. Etiam euismod sodales lacus et vulputate. Integer consectetur neque neque, consequat varius neque pulvinar quis. Morbi nec viverra massa, nec eleifend lectus. In mattis lorem quis tellus volutpat, ac</div>
-                <div class="answer">orem ipsum dolor sit amet, consectetur adipiscing elit. Integer non lorem turpis. Ut consectetur fringilla sapien sagittis feugiat. Ut venenatis ipsum felis, eget feugiat augue laoreet in. Sed a lectus enim. Ut nunc nisi, rutrum quis tincidunt sit amet, dignissim et nibh. Quisque scelerisque, erat vitae dapibus ornare, neque tortor eleifend diam, in hendrerit turpis erat eu dolor. Vestibulum at justo vel nunc fermentum rhoncus. Vestibulum placerat lobortis laoreet. Etiam euismod sodales lacus et vulputate. Integer consectetur neque neque, consequat varius.</div>
-              </div>
-              <div class="tab-body">
-                <div class="question">orem ipsum dolor sit amet, consectetur adipiscing elit. Integer non lorem turpis. Ut consectetur fringilla sapien sagittis feugiat. Ut venenatis ipsum felis, eget feugiat augue laoreet in. Sed a lectus enim. Ut nunc nisi, rutrum quis tincidunt sit amet, dignissim et nibh. Quisque scelerisque, erat vitae dapibus ornare, neque tortor eleifend diam, in hendrerit turpis erat eu dolor. Vestibulum at justo vel nunc fermentum rhoncus. Vestibulum placerat lobortis laoreet. Etiam euismod sodales lacus et vulputate. Integer consectetur neque neque, consequat varius neque pulvinar quis. Morbi nec viverra massa, nec eleifend lectus. In mattis lorem quis tellus volutpat, ac semper purus lacinia. Nunc velit augue, molestie ac sapien nec,</div>
-                <div class="answer">orem ipsum dolor sit amet, consectetur adipiscing elit. Integer non lorem turpis. Ut consectetur fringilla sapien sagittis feugiat. Ut venenatis ipsum felis, eget feugiat augue laoreet in. Sed a lectus enim. Ut nunc nisi, rutrum quis tincidunt sit amet, dignissim et nibh. Quisque scelerisque, erat vitae dapibus ornare, neque tortor eleifend diam, in hendrerit turpis erat eu dolor. Vestibulum at justo vel nunc fermentum rhoncus. Vestibulum placerat lobortis laoreet. Etiam euismod sodales lacus et vulputate. Integer consectetur neque neque, consequat varius neque pulvinar quis. Morbi nec viverra massa, nec eleifend lectus. In mattis lorem quis tellus volutpat, ac semper purus lacinia. Nunc velit augue, molestie ac sapien nec,</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="articles">
-        <div class="container">
-          <div class="articles-component">
-            <div class="article">
-              <div class="img-wrap"><img src="img/content/case-01.jpg"></div>
-              <div class="body-wrap">
-                <h2 class="title">CASE STUDY</h2>
-                <div class="description">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer non lorem turpis. Ut consectetur fringilla sapien sagittis feugiat. Ut venenatis ipsum felis, eget feugiat augue laoreet in. Sed a lectus enim. Ut nunc nisi.</p><a class="btn btn-main" href="#">MORE</a>
+              <div class="tab-b">
+                <div class="tab-body">
+                  <div class="question">Donec vel mauris eget enim sagittis ullamcorper id vitae augue. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam fermentum ultrices velit, at faucibus orci vestibulum sed. Proin id varius mauris. Donec eget eros purus. Nam lorem nulla, mattis id cursus ac, lacinia eget purus. Quisque si</div>
+                  <div class="answer">orem ipsum dolor sit amet, consectetur adipiscing elit. Integer non lorem turpis. Ut consectetur fringilla sapien sagittis feugiat. Ut venenatis ipsum felis, eget feugiat augue laoreet in. Sed a lectus enim. Ut nunc nisi, rutrum quis tincidunt sit amet, dignissim et nibh. Quisque scelerisque, erat vitae dapibus ornare, neque tortor eleifend diam, in hendrerit turpis erat eu dolor. Vestibulum at justo vel nunc fermentum rhoncus. Vestibulum placerat lobortis laoreet. Etiam euismod sodales lacus et vulputate. Integer consectetur neque neque, consequat varius neque pulvinar quis. Morbi nec viverra massa, nec eleifend lectus. In mattis lorem quis tellus volutpat, ac semper purus lacinia. Nunc velit augue, molestie ac sapien nec,</div>
                 </div>
-              </div>
-            </div>
-            <div class="article">
-              <div class="img-wrap"><img src="img/content/case-01.jpg"></div>
-              <div class="body-wrap">
-                <h2 class="title">CASE STUDY</h2>
-                <div class="description">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer non lorem turpis. Ut consectetur fringilla sapien sagittis feugiat. Ut venenatis ipsum felis, eget feugiat augue laoreet in. Sed a lectus enim. Ut nunc nisi.</p><a class="btn btn-main" href="#">MORE</a>
+                <div class="tab-body">
+                  <div class="question">orem ipsum dolor sit amet, consectetur adipiscing elit. Integer non lorem turpis. Ut consectetur fringilla sapien sagittis feugiat. Ut venenatis ipsum felis, eget feugiat augue laoreet in. Sed a lectus enim. Ut nunc nisi, rutrum quis tincidunt sit amet, dignissim et nibh. Quisque scelerisque, erat vitae dapibus ornare, neque tortor eleifend diam, in hendrerit turpis erat eu dolor. Vestibulum at justo vel nunc fermentum rhoncus. Vestibulum placerat lobortis laoreet. Etiam euismod sodales lacus et vulputate. Integer consectetur neque neque, consequat varius neque pulvinar quis. Morbi nec viverra massa, nec eleifend lectus. In mattis.</div>
+                  <div class="answer">orem ipsum dolor sit amet, consectetur adipiscing elit. Integer non lorem turpis. Ut consectetur fringilla sapien sagittis feugiat. Ut venenatis ipsum felis, eget feugiat augue laoreet in. Sed a lectus enim. Ut nunc nisi, rutrum quis tincidunt sit amet, dignissim et nibh. Quisque scelerisque, erat vitae dapibus ornare, neque tortor eleifend diam, in hendrerit turpis erat eu dolor. Vestibulum at justo vel nunc fermentum rhoncus. Vestibulum placerat lobortis laoreet. Etiam euismod sodales lacus et vulputate. Integer consectetur neque neque, consequat varius neque pulvinar quis. Morbi nec viverra massa, nec eleifend lectus. In mattis.</div>
                 </div>
-              </div>
-            </div>
-            <div class="article">
-              <div class="img-wrap"><img src="img/content/case-01.jpg"></div>
-              <div class="body-wrap">
-                <h2 class="title">CASE STUDY</h2>
-                <div class="description">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer non lorem turpis. Ut consectetur fringilla sapien sagittis feugiat. Ut venenatis ipsum felis, eget feugiat augue laoreet in. Sed a lectus enim. Ut nunc nisi.</p><a class="btn btn-main" href="#">MORE</a>
+                <div class="tab-body">
+                  <div class="question">orem ipsum dolor sit amet, consectetur adipiscing elit. Integer non lorem turpis. Ut consectetur fringilla sapien sagittis feugiat. Ut venenatis ipsum felis, eget feugiat augue laoreet in. Sed a lectus enim. Ut nunc nisi, rutrum quis tincidunt sit amet, dignissim et nibh. Quisque scelerisque, erat vitae dapibus ornare, neque tortor eleifend diam, in hendrerit turpis erat eu dolor. Vestibulum at justo vel nunc fermentum rhoncus. Vestibulum placerat lobortis laoreet. Etiam euismod sodales lacus et vulputate. Integer consectetur neque neque, consequat varius neque pulvinar quis. Morbi nec viverra massa, nec eleifend lectus. In mattis lorem quis tellus volutpat, ac</div>
+                  <div class="answer">orem ipsum dolor sit amet, consectetur adipiscing elit. Integer non lorem turpis. Ut consectetur fringilla sapien sagittis feugiat. Ut venenatis ipsum felis, eget feugiat augue laoreet in. Sed a lectus enim. Ut nunc nisi, rutrum quis tincidunt sit amet, dignissim et nibh. Quisque scelerisque, erat vitae dapibus ornare, neque tortor eleifend diam, in hendrerit turpis erat eu dolor. Vestibulum at justo vel nunc fermentum rhoncus. Vestibulum placerat lobortis laoreet. Etiam euismod sodales lacus et vulputate. Integer consectetur neque neque, consequat varius.</div>
+                </div>
+                <div class="tab-body">
+                  <div class="question">orem ipsum dolor sit amet, consectetur adipiscing elit. Integer non lorem turpis. Ut consectetur fringilla sapien sagittis feugiat. Ut venenatis ipsum felis, eget feugiat augue laoreet in. Sed a lectus enim. Ut nunc nisi, rutrum quis tincidunt sit amet, dignissim et nibh. Quisque scelerisque, erat vitae dapibus ornare, neque tortor eleifend diam, in hendrerit turpis erat eu dolor. Vestibulum at justo vel nunc fermentum rhoncus. Vestibulum placerat lobortis laoreet. Etiam euismod sodales lacus et vulputate. Integer consectetur neque neque, consequat varius neque pulvinar quis. Morbi nec viverra massa, nec eleifend lectus. In mattis lorem quis tellus volutpat, ac semper purus lacinia. Nunc velit augue, molestie ac sapien nec,</div>
+                  <div class="answer">orem ipsum dolor sit amet, consectetur adipiscing elit. Integer non lorem turpis. Ut consectetur fringilla sapien sagittis feugiat. Ut venenatis ipsum felis, eget feugiat augue laoreet in. Sed a lectus enim. Ut nunc nisi, rutrum quis tincidunt sit amet, dignissim et nibh. Quisque scelerisque, erat vitae dapibus ornare, neque tortor eleifend diam, in hendrerit turpis erat eu dolor. Vestibulum at justo vel nunc fermentum rhoncus. Vestibulum placerat lobortis laoreet. Etiam euismod sodales lacus et vulputate. Integer consectetur neque neque, consequat varius neque pulvinar quis. Morbi nec viverra massa, nec eleifend lectus. In mattis lorem quis tellus volutpat, ac semper purus lacinia. Nunc velit augue, molestie ac sapien nec,</div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-      <section class="calculator">
-        <div class="container">
-          <h2 class="section-title">Try Out Our Savings Calculator</h2>
-          <h3 class="section-subtitle">LEARN HOW YOU CAN SAVE 60% ON YOUR BILL</h3>
-          <div class="calculator-component">
-            <iframe src="https://ssccust1.spreadsheethosting.com/tmp/1b/9f83c4e7a944bd/Energy%20reduction%20saving%20calculator%20180702/Energy%20reduction%20saving%20calculator%20180702.htm" width="100%" height="450" border="0" frameborder="0"></iframe>
+        </section>
+        <section class="articles">
+          <div class="container">
+            <div class="articles-component">
+              <div class="article">
+                <div class="img-wrap"><img src="img/content/case-01.jpg"></div>
+                <div class="body-wrap">
+                  <h2 class="title">CASE STUDY</h2>
+                  <div class="description">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer non lorem turpis. Ut consectetur fringilla sapien sagittis feugiat. Ut venenatis ipsum felis, eget feugiat augue laoreet in. Sed a lectus enim. Ut nunc nisi.</p><a class="cbtn cbtn-main" href="#">MORE</a>
+                  </div>
+                </div>
+              </div>
+              <div class="article">
+                <div class="img-wrap"><img src="img/content/case-01.jpg"></div>
+                <div class="body-wrap">
+                  <h2 class="title">CASE STUDY</h2>
+                  <div class="description">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer non lorem turpis. Ut consectetur fringilla sapien sagittis feugiat. Ut venenatis ipsum felis, eget feugiat augue laoreet in. Sed a lectus enim. Ut nunc nisi.</p><a class="cbtn cbtn-main" href="#">MORE</a>
+                  </div>
+                </div>
+              </div>
+              <div class="article">
+                <div class="img-wrap"><img src="img/content/case-01.jpg"></div>
+                <div class="body-wrap">
+                  <h2 class="title">CASE STUDY</h2>
+                  <div class="description">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer non lorem turpis. Ut consectetur fringilla sapien sagittis feugiat. Ut venenatis ipsum felis, eget feugiat augue laoreet in. Sed a lectus enim. Ut nunc nisi.</p><a class="cbtn cbtn-main" href="#">MORE</a>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-      </section>
-      <section class="contact-us">
-        <div class="container">
-          <h2 class="section-title">SO WHAT'S NEXT? ASK US A QUESTION</h2><a class="btn btn-second-o" href="#">CONTACT US</a>
-        </div>
-      </section>
-      <section class="vision">
-        <div class="container">
-          <h2 class="section-title">World Vision</h2>
-        </div>
-      </section>
-    </main>
-    <footer>
+        </section>
+        <section class="calculator">
+          <div class="container">
+            <h2 class="section-title">Try Out Our Savings Calculator</h2>
+            <h3 class="section-subtitle">LEARN HOW YOU CAN SAVE 60% ON YOUR BILL</h3>
+            <div class="calculator-component">
+              <iframe src="https://ssccust1.spreadsheethosting.com/tmp/1b/9f83c4e7a944bd/Energy%20reduction%20saving%20calculator%20180702/Energy%20reduction%20saving%20calculator%20180702.htm" width="100%" height="450" border="0" frameborder="0"></iframe>
+            </div>
+          </div>
+        </section>
+        <section class="contact-us">
+          <div class="container">
+            <h2 class="section-title">SO WHAT'S NEXT? ASK US A QUESTION</h2><a class="cbtn cbtn-second-o" href="#">CONTACT US</a>
+          </div>
+        </section>
+        <section class="vision">
+          <div class="container">
+            <h2 class="section-title">World Vision</h2>
+          </div>
+        </section>
+      </div>
+    </div>
+    <footer class="footer-revamp">
       <div class="footer-top">
         <div class="container">
           <div class="logo-component"><img src="img/ui/logo.svg"></div>

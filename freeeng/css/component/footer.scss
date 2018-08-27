@@ -1,5 +1,117 @@
-footer {
+footer.footer-revamp {
 	background: $grey;
+	padding: 0;
+
+	.container {
+		width: 1366px;
+		padding: 0;
+
+		&::after,&::before {
+			content: none;
+		}
+	}
+
+	h1 {
+		@include default-text("h1");
+		color: $body;
+	}
+	h2 {
+		@include default-text("h2");
+		color: $body;
+	}
+	h3 {
+		@include default-text("h3");
+		color: $body;
+	}
+	h4 {
+		@include default-text("h4");
+		color: $body;
+	}
+	
+	p,span {
+		font-size: 1.6rem;
+		font-weight: normal;
+		line-height: 1.4;
+		margin-bottom: 25px;
+		color: $body;
+	}
+	
+	a {
+		font-weight: 400;
+		font-size: 1.6rem;
+		color: $second;
+		
+		&:hover {
+			color: $second;
+		}
+		
+		&:visited {
+			color: $second;
+		}
+	}
+	
+	ul {
+		padding: 0;
+		margin-bottom: 15px;
+		font-weight: 400;
+		font-size: 1.6rem;
+		color: $body;
+		
+		li {
+		}
+	}
+	
+	ol {
+		padding: 0;
+		margin-bottom: 15px;
+		font-weight: 400;
+		font-size: 1.6rem;
+		color: $body;
+		
+		li {
+			margin-left: 40px;
+		}
+	}
+	
+	table {
+		width: 100%;
+		
+		thead {
+			width: inherit;
+			
+			tr {
+				th {
+					padding: 20px 80px 20px 0;
+					font-size: 1.6rem;
+					
+					h4 {
+						margin: 0;
+					}
+				}
+			}
+		}
+		
+		tbody {
+			width: inherit;
+			
+			tr {
+				td {
+					padding: 15px 80px 15px 0;
+					font-size: 1.6rem;
+					
+					h4,
+					p {
+						margin: 0;
+					}
+				}
+				
+				&:not(:first-child) {
+					border-top: 1px solid #cacaca;
+				}
+			}
+			
+		}
+	}
 	
 	.footer-top {
 		padding: 50px 0 45px;
@@ -154,7 +266,7 @@ footer {
 // desktop normal and tablet landscape ( max-width 1199px )
 @include media-breakpoint-down(lg) {
 	
-	footer {
+	footer.footer-revamp {
 		.footer-bottom {
 			.copyright {
 				a {
@@ -179,7 +291,7 @@ footer {
 // desktop small and tablet potrait ( max-width 991px )
 @include media-breakpoint-down(md) {
 	
-	footer {
+	footer.footer-revamp {
 		.footer-top {
 			padding: 20px 0 30px;
 
@@ -204,7 +316,70 @@ footer {
 // mobile potrait and landscape ( max-width 767px )
 @include media-breakpoint-down(sm) {
 	
-	footer {
+	footer.footer-revamp {
+
+		h1 {
+			font-size: 22px;
+		}
+		h2 {
+			font-size: 18px;
+		}
+		h3 {
+			font-size: 16px;
+		}
+		
+		.mobile-contact-table {
+			display: block;
+		}
+		
+		.contact-table {
+			display: none;
+		}
+		
+		blockquote {
+			font-size: 2.2rem;
+		}
+		
+		.bootstrap-datetimepicker-widget {
+			
+		}
+		
+		.mobile-contact-table {
+			
+			thead,tbody {
+				width: 100%;
+				
+				tr {
+					td {
+						width: 100%;
+					}
+				}
+			}
+			
+			+ .mobile-contact-table {
+				margin-top: 0;
+			}
+		}
+		
+		.panel-container {
+			margin: 0 -10px;
+			border-left: 0;
+			border-right: 0;
+			
+			.panel-header,.panel-content {
+				padding-left: 10px;
+				padding-right: 10px;
+				
+				.panel-handle {
+					right: 10px;
+				}
+			}
+		}
+	
+		.container {
+			max-width: 90%;
+			width: 90%;
+		}
 
 		.footer-bottom {
 			.copyright {
@@ -229,7 +404,7 @@ footer {
 
 //small mobile (max-width 480px)
 @include media-breakpoint-down(xs) {
-	footer {
+	footer.footer-revamp {
 
 		.footer-top {
 			.info-component {

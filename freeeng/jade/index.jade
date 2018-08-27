@@ -11,194 +11,195 @@ html(lang="id")
 		include ./includes/head.jade
 
 	// body
-	body.revamp
+	body
 
 		// page header
 		include ./includes/header.jade 
 
 		// page main
-		main(role="main")
-			section.hero
-				.slider-component
-					.slider-wrap
-						.slider-img
-							img(data-lazy="img/content/carousel-03.jpg")
-						.slider-text
-							h2.subtitle Engineers helping you save money <br/>and time in finding the best solar deal. 
-							.slider-button
-								a(href="#").btn.btn-main HOW IT WORKS
-								a(href="#").btn.btn-second SAVING CALCULATOR
-					.slider-wrap
-						.slider-img
-							img(data-lazy="img/content/carousel-02.jpg")
-						.slider-text
-							h2.subtitle Engineers helping you save money <br/>and time in finding the best solar deal. 
-							.slider-button
-								a(href="#").btn.btn-main HOW IT WORKS
-								a(href="#").btn.btn-second SAVING CALCULATOR
-					.slider-wrap
-						.slider-img
-							img(data-lazy="img/content/carousel-01.jpg")
-						.slider-text
-							h2.subtitle We Research Your Best Solar Deal
-							h2.title For Free
-							.slider-button
-								a(href="#").btn.btn-main HOW IT WORKS
-								a(href="#").btn.btn-second SAVING CALCULATOR
-					
-				.steps-component
+		.section-page
+			.main-revamp
+				section.hero
+					.slider-component
+						.slider-wrap
+							.slider-img
+								img(data-lazy="img/content/carousel-03.jpg")
+							.slider-text
+								h2.subtitle Engineers helping you save money <br/>and time in finding the best solar deal. 
+								.slider-button
+									a(href="#").cbtn.cbtn-main HOW IT WORKS
+									a(href="#").cbtn.cbtn-second SAVING CALCULATOR
+						.slider-wrap
+							.slider-img
+								img(data-lazy="img/content/carousel-02.jpg")
+							.slider-text
+								h2.subtitle Engineers helping you save money <br/>and time in finding the best solar deal. 
+								.slider-button
+									a(href="#").cbtn.cbtn-main HOW IT WORKS
+									a(href="#").cbtn.cbtn-second SAVING CALCULATOR
+						.slider-wrap
+							.slider-img
+								img(data-lazy="img/content/carousel-01.jpg")
+							.slider-text
+								h2.subtitle We Research Your Best Solar Deal
+								h2.title For Free
+								.slider-button
+									a(href="#").cbtn.cbtn-main HOW IT WORKS
+									a(href="#").cbtn.cbtn-second SAVING CALCULATOR
+						
+					.steps-component
+						.container
+							.step
+								.no
+									p 1
+									img(src="img/ui/ic-step-01.svg")
+								.description
+									p Contact us with what you want
+							.step
+								.no
+									p 2
+									img(src="img/ui/ic-step-02.svg")
+								.description
+									p We help you make energy & solar simple
+							.step
+								.no
+									p 3
+									img(src="img/ui/ic-step-03.svg")
+								.description
+									p Our engineers assess & develop the solutions
+							.step
+								.no
+									p 4
+									img(src="img/ui/ic-step-04.svg")
+								.description
+									p We find you up to 3 trusted competitive suppliers
+							.step
+								.no
+									p 5
+									img(src="img/ui/ic-step-05.svg")
+								.description
+									p You have the final say, with our support
+							.step
+								.no
+									p 6
+									img(src="img/ui/ic-step-06.svg")
+								.description
+									p Installation we support you with site visits
+							.step
+								.no
+									p 7
+									img(src="img/ui/ic-step-07.svg")
+								.description
+									p We verify the saving after install	
+				section.reasons
+					.reason-component
+						.img-wrap
+							img(src="img/content/reason-01.jpg")
+						.body-wrap
+							h2.title Why Use<br/>Free Engineer?
+							.description
+								p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut libero est, facilisis vel odio ut, bibendum dapibus risus. Fusce consectetur auctor magna vel vestibulum. Maecenas dui enim, suscipit quis tortor quis, auctor dapibus sem. Curabitur vehicula faucibus eleifend. Sed et mi eget tortor euismod fringilla. Nam in egesttas odio. Vestibulum ipsum
+					.reason-component
+						.body-wrap
+							h2.title Buy or Lease?
+							a(href="#").cbtn.cbtn-main let us help you decide
+						.img-wrap
+							img(src="img/content/reason-02.jpg")
+				section.plans
 					.container
-						.step
-							.no
-								p 1
-								img(src="img/ui/ic-step-01.svg")
-							.description
-								p Contact us with what you want
-						.step
-							.no
-								p 2
-								img(src="img/ui/ic-step-02.svg")
-							.description
-								p We help you make energy & solar simple
-						.step
-							.no
-								p 3
-								img(src="img/ui/ic-step-03.svg")
-							.description
-								p Our engineers assess & develop the solutions
-						.step
-							.no
-								p 4
-								img(src="img/ui/ic-step-04.svg")
-							.description
-								p We find you up to 3 trusted competitive suppliers
-						.step
-							.no
-								p 5
-								img(src="img/ui/ic-step-05.svg")
-							.description
-								p You have the final say, with our support
-						.step
-							.no
-								p 6
-								img(src="img/ui/ic-step-06.svg")
-							.description
-								p Installation we support you with site visits
-						.step
-							.no
-								p 7
-								img(src="img/ui/ic-step-07.svg")
-							.description
-								p We verify the saving after install	
-			section.reasons
-				.reason-component
-					.img-wrap
-						img(src="img/content/reason-01.jpg")
-					.body-wrap
-						h2.title Why Use<br/>Free Engineer?
-						.description
-							p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut libero est, facilisis vel odio ut, bibendum dapibus risus. Fusce consectetur auctor magna vel vestibulum. Maecenas dui enim, suscipit quis tortor quis, auctor dapibus sem. Curabitur vehicula faucibus eleifend. Sed et mi eget tortor euismod fringilla. Nam in egesttas odio. Vestibulum ipsum
-				.reason-component
-					.body-wrap
-						h2.title Buy or Lease?
-						a(href="#").btn.btn-main let us help you decide
-					.img-wrap
-						img(src="img/content/reason-02.jpg")
-			section.plans
-				.container
-					h2.section-title Save Up To<br/>60% On Your Power
-					.plans-component
-						.plan
-							.title RESIDENTIAL
-							ul
-								li Super Long Feature Item
-								li Feature Item
-								li Super Long Feature Item
-								li Long Feature
-								li Feature Item
-							a(href="#").btn.btn-main-o Enquire now
-						.plan.active
-							.title RESIDENTIAL
-							ul
-								li Super Long Feature Item
-								li Feature Item
-								li Super Long Feature Item
-								li Long Feature
-								li Feature Item
-							a(href="#").btn.btn-main-o Enquire now
-						.plan
-							.title RESIDENTIAL
-							ul
-								li Super Long Feature Item
-								li Feature Item
-								li Super Long Feature Item
-								li Long Feature
-								li Feature Item
-							a(href="#").btn.btn-main-o Enquire now
-			section.faq
-				.container
-					h2.section-title Get It Done Without The Headaches
-					h3.section-subtitle FREQUENTLY ASKED QUESTIONS
-					.tabs-component
-						.tab-h
-							.tab-head Test Title Pendek
-							.tab-head Donec Vel Mauris Eget Enim Sagitis Ullam
-							.tab-head Donec Vel Mauris Eget Enim Sagitis Ullam Lorem Ipsum Lorem Dolor
-							.tab-head Donec Vel Mauris Eget Enim
-						.tab-b
-							.tab-body
-								.question Donec vel mauris eget enim sagittis ullamcorper id vitae augue. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam fermentum ultrices velit, at faucibus orci vestibulum sed. Proin id varius mauris. Donec eget eros purus. Nam lorem nulla, mattis id cursus ac, lacinia eget purus. Quisque si
-								.answer orem ipsum dolor sit amet, consectetur adipiscing elit. Integer non lorem turpis. Ut consectetur fringilla sapien sagittis feugiat. Ut venenatis ipsum felis, eget feugiat augue laoreet in. Sed a lectus enim. Ut nunc nisi, rutrum quis tincidunt sit amet, dignissim et nibh. Quisque scelerisque, erat vitae dapibus ornare, neque tortor eleifend diam, in hendrerit turpis erat eu dolor. Vestibulum at justo vel nunc fermentum rhoncus. Vestibulum placerat lobortis laoreet. Etiam euismod sodales lacus et vulputate. Integer consectetur neque neque, consequat varius neque pulvinar quis. Morbi nec viverra massa, nec eleifend lectus. In mattis lorem quis tellus volutpat, ac semper purus lacinia. Nunc velit augue, molestie ac sapien nec,
-							.tab-body
-								.question orem ipsum dolor sit amet, consectetur adipiscing elit. Integer non lorem turpis. Ut consectetur fringilla sapien sagittis feugiat. Ut venenatis ipsum felis, eget feugiat augue laoreet in. Sed a lectus enim. Ut nunc nisi, rutrum quis tincidunt sit amet, dignissim et nibh. Quisque scelerisque, erat vitae dapibus ornare, neque tortor eleifend diam, in hendrerit turpis erat eu dolor. Vestibulum at justo vel nunc fermentum rhoncus. Vestibulum placerat lobortis laoreet. Etiam euismod sodales lacus et vulputate. Integer consectetur neque neque, consequat varius neque pulvinar quis. Morbi nec viverra massa, nec eleifend lectus. In mattis.
-								.answer orem ipsum dolor sit amet, consectetur adipiscing elit. Integer non lorem turpis. Ut consectetur fringilla sapien sagittis feugiat. Ut venenatis ipsum felis, eget feugiat augue laoreet in. Sed a lectus enim. Ut nunc nisi, rutrum quis tincidunt sit amet, dignissim et nibh. Quisque scelerisque, erat vitae dapibus ornare, neque tortor eleifend diam, in hendrerit turpis erat eu dolor. Vestibulum at justo vel nunc fermentum rhoncus. Vestibulum placerat lobortis laoreet. Etiam euismod sodales lacus et vulputate. Integer consectetur neque neque, consequat varius neque pulvinar quis. Morbi nec viverra massa, nec eleifend lectus. In mattis.
-							.tab-body
-								.question orem ipsum dolor sit amet, consectetur adipiscing elit. Integer non lorem turpis. Ut consectetur fringilla sapien sagittis feugiat. Ut venenatis ipsum felis, eget feugiat augue laoreet in. Sed a lectus enim. Ut nunc nisi, rutrum quis tincidunt sit amet, dignissim et nibh. Quisque scelerisque, erat vitae dapibus ornare, neque tortor eleifend diam, in hendrerit turpis erat eu dolor. Vestibulum at justo vel nunc fermentum rhoncus. Vestibulum placerat lobortis laoreet. Etiam euismod sodales lacus et vulputate. Integer consectetur neque neque, consequat varius neque pulvinar quis. Morbi nec viverra massa, nec eleifend lectus. In mattis lorem quis tellus volutpat, ac
-								.answer orem ipsum dolor sit amet, consectetur adipiscing elit. Integer non lorem turpis. Ut consectetur fringilla sapien sagittis feugiat. Ut venenatis ipsum felis, eget feugiat augue laoreet in. Sed a lectus enim. Ut nunc nisi, rutrum quis tincidunt sit amet, dignissim et nibh. Quisque scelerisque, erat vitae dapibus ornare, neque tortor eleifend diam, in hendrerit turpis erat eu dolor. Vestibulum at justo vel nunc fermentum rhoncus. Vestibulum placerat lobortis laoreet. Etiam euismod sodales lacus et vulputate. Integer consectetur neque neque, consequat varius.
-							.tab-body
-								.question orem ipsum dolor sit amet, consectetur adipiscing elit. Integer non lorem turpis. Ut consectetur fringilla sapien sagittis feugiat. Ut venenatis ipsum felis, eget feugiat augue laoreet in. Sed a lectus enim. Ut nunc nisi, rutrum quis tincidunt sit amet, dignissim et nibh. Quisque scelerisque, erat vitae dapibus ornare, neque tortor eleifend diam, in hendrerit turpis erat eu dolor. Vestibulum at justo vel nunc fermentum rhoncus. Vestibulum placerat lobortis laoreet. Etiam euismod sodales lacus et vulputate. Integer consectetur neque neque, consequat varius neque pulvinar quis. Morbi nec viverra massa, nec eleifend lectus. In mattis lorem quis tellus volutpat, ac semper purus lacinia. Nunc velit augue, molestie ac sapien nec,
-								.answer orem ipsum dolor sit amet, consectetur adipiscing elit. Integer non lorem turpis. Ut consectetur fringilla sapien sagittis feugiat. Ut venenatis ipsum felis, eget feugiat augue laoreet in. Sed a lectus enim. Ut nunc nisi, rutrum quis tincidunt sit amet, dignissim et nibh. Quisque scelerisque, erat vitae dapibus ornare, neque tortor eleifend diam, in hendrerit turpis erat eu dolor. Vestibulum at justo vel nunc fermentum rhoncus. Vestibulum placerat lobortis laoreet. Etiam euismod sodales lacus et vulputate. Integer consectetur neque neque, consequat varius neque pulvinar quis. Morbi nec viverra massa, nec eleifend lectus. In mattis lorem quis tellus volutpat, ac semper purus lacinia. Nunc velit augue, molestie ac sapien nec,
-			section.articles
-				.container
-					.articles-component
-						.article
-							.img-wrap
-								img(src="img/content/case-01.jpg")
-							.body-wrap
-								h2.title CASE STUDY
-								.description
-									p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer non lorem turpis. Ut consectetur fringilla sapien sagittis feugiat. Ut venenatis ipsum felis, eget feugiat augue laoreet in. Sed a lectus enim. Ut nunc nisi.
-									a(href="#").btn.btn-main MORE
-						.article
-							.img-wrap
-								img(src="img/content/case-01.jpg")
-							.body-wrap
-								h2.title CASE STUDY
-								.description
-									p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer non lorem turpis. Ut consectetur fringilla sapien sagittis feugiat. Ut venenatis ipsum felis, eget feugiat augue laoreet in. Sed a lectus enim. Ut nunc nisi.
-									a(href="#").btn.btn-main MORE
-						.article
-							.img-wrap
-								img(src="img/content/case-01.jpg")
-							.body-wrap
-								h2.title CASE STUDY
-								.description
-									p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer non lorem turpis. Ut consectetur fringilla sapien sagittis feugiat. Ut venenatis ipsum felis, eget feugiat augue laoreet in. Sed a lectus enim. Ut nunc nisi.
-									a(href="#").btn.btn-main MORE
-			section.calculator
-				.container
-					h2.section-title Try Out Our Savings Calculator
-					h3.section-subtitle LEARN HOW YOU CAN SAVE 60% ON YOUR BILL
-					.calculator-component
-						iframe(src="https://ssccust1.spreadsheethosting.com/tmp/1b/9f83c4e7a944bd/Energy%20reduction%20saving%20calculator%20180702/Energy%20reduction%20saving%20calculator%20180702.htm" width='100%' height='450' border='0' frameborder='0')
-			section.contact-us
-				.container
-					h2.section-title SO WHAT'S NEXT? ASK US A QUESTION
-					a(href="#").btn.btn-second-o CONTACT US
-			section.vision
-				.container
-					h2.section-title World Vision
-		footer
+						h2.section-title Save Up To<br/>60% On Your Power
+						.plans-component
+							.plan
+								.title RESIDENTIAL
+								ul
+									li Super Long Feature Item
+									li Feature Item
+									li Super Long Feature Item
+									li Long Feature
+									li Feature Item
+								a(href="#").cbtn.cbtn-main-o Enquire now
+							.plan.active
+								.title RESIDENTIAL
+								ul
+									li Super Long Feature Item
+									li Feature Item
+									li Super Long Feature Item
+									li Long Feature
+									li Feature Item
+								a(href="#").cbtn.cbtn-main-o Enquire now
+							.plan
+								.title RESIDENTIAL
+								ul
+									li Super Long Feature Item
+									li Feature Item
+									li Super Long Feature Item
+									li Long Feature
+									li Feature Item
+								a(href="#").cbtn.cbtn-main-o Enquire now
+				section.faq
+					.container
+						h2.section-title Get It Done Without The Headaches
+						h3.section-subtitle FREQUENTLY ASKED QUESTIONS
+						.tabs-component
+							.tab-h
+								.tab-head Test Title Pendek
+								.tab-head Donec Vel Mauris Eget Enim Sagitis Ullam
+								.tab-head Donec Vel Mauris Eget Enim Sagitis Ullam Lorem Ipsum Lorem Dolor
+								.tab-head Donec Vel Mauris Eget Enim
+							.tab-b
+								.tab-body
+									.question Donec vel mauris eget enim sagittis ullamcorper id vitae augue. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam fermentum ultrices velit, at faucibus orci vestibulum sed. Proin id varius mauris. Donec eget eros purus. Nam lorem nulla, mattis id cursus ac, lacinia eget purus. Quisque si
+									.answer orem ipsum dolor sit amet, consectetur adipiscing elit. Integer non lorem turpis. Ut consectetur fringilla sapien sagittis feugiat. Ut venenatis ipsum felis, eget feugiat augue laoreet in. Sed a lectus enim. Ut nunc nisi, rutrum quis tincidunt sit amet, dignissim et nibh. Quisque scelerisque, erat vitae dapibus ornare, neque tortor eleifend diam, in hendrerit turpis erat eu dolor. Vestibulum at justo vel nunc fermentum rhoncus. Vestibulum placerat lobortis laoreet. Etiam euismod sodales lacus et vulputate. Integer consectetur neque neque, consequat varius neque pulvinar quis. Morbi nec viverra massa, nec eleifend lectus. In mattis lorem quis tellus volutpat, ac semper purus lacinia. Nunc velit augue, molestie ac sapien nec,
+								.tab-body
+									.question orem ipsum dolor sit amet, consectetur adipiscing elit. Integer non lorem turpis. Ut consectetur fringilla sapien sagittis feugiat. Ut venenatis ipsum felis, eget feugiat augue laoreet in. Sed a lectus enim. Ut nunc nisi, rutrum quis tincidunt sit amet, dignissim et nibh. Quisque scelerisque, erat vitae dapibus ornare, neque tortor eleifend diam, in hendrerit turpis erat eu dolor. Vestibulum at justo vel nunc fermentum rhoncus. Vestibulum placerat lobortis laoreet. Etiam euismod sodales lacus et vulputate. Integer consectetur neque neque, consequat varius neque pulvinar quis. Morbi nec viverra massa, nec eleifend lectus. In mattis.
+									.answer orem ipsum dolor sit amet, consectetur adipiscing elit. Integer non lorem turpis. Ut consectetur fringilla sapien sagittis feugiat. Ut venenatis ipsum felis, eget feugiat augue laoreet in. Sed a lectus enim. Ut nunc nisi, rutrum quis tincidunt sit amet, dignissim et nibh. Quisque scelerisque, erat vitae dapibus ornare, neque tortor eleifend diam, in hendrerit turpis erat eu dolor. Vestibulum at justo vel nunc fermentum rhoncus. Vestibulum placerat lobortis laoreet. Etiam euismod sodales lacus et vulputate. Integer consectetur neque neque, consequat varius neque pulvinar quis. Morbi nec viverra massa, nec eleifend lectus. In mattis.
+								.tab-body
+									.question orem ipsum dolor sit amet, consectetur adipiscing elit. Integer non lorem turpis. Ut consectetur fringilla sapien sagittis feugiat. Ut venenatis ipsum felis, eget feugiat augue laoreet in. Sed a lectus enim. Ut nunc nisi, rutrum quis tincidunt sit amet, dignissim et nibh. Quisque scelerisque, erat vitae dapibus ornare, neque tortor eleifend diam, in hendrerit turpis erat eu dolor. Vestibulum at justo vel nunc fermentum rhoncus. Vestibulum placerat lobortis laoreet. Etiam euismod sodales lacus et vulputate. Integer consectetur neque neque, consequat varius neque pulvinar quis. Morbi nec viverra massa, nec eleifend lectus. In mattis lorem quis tellus volutpat, ac
+									.answer orem ipsum dolor sit amet, consectetur adipiscing elit. Integer non lorem turpis. Ut consectetur fringilla sapien sagittis feugiat. Ut venenatis ipsum felis, eget feugiat augue laoreet in. Sed a lectus enim. Ut nunc nisi, rutrum quis tincidunt sit amet, dignissim et nibh. Quisque scelerisque, erat vitae dapibus ornare, neque tortor eleifend diam, in hendrerit turpis erat eu dolor. Vestibulum at justo vel nunc fermentum rhoncus. Vestibulum placerat lobortis laoreet. Etiam euismod sodales lacus et vulputate. Integer consectetur neque neque, consequat varius.
+								.tab-body
+									.question orem ipsum dolor sit amet, consectetur adipiscing elit. Integer non lorem turpis. Ut consectetur fringilla sapien sagittis feugiat. Ut venenatis ipsum felis, eget feugiat augue laoreet in. Sed a lectus enim. Ut nunc nisi, rutrum quis tincidunt sit amet, dignissim et nibh. Quisque scelerisque, erat vitae dapibus ornare, neque tortor eleifend diam, in hendrerit turpis erat eu dolor. Vestibulum at justo vel nunc fermentum rhoncus. Vestibulum placerat lobortis laoreet. Etiam euismod sodales lacus et vulputate. Integer consectetur neque neque, consequat varius neque pulvinar quis. Morbi nec viverra massa, nec eleifend lectus. In mattis lorem quis tellus volutpat, ac semper purus lacinia. Nunc velit augue, molestie ac sapien nec,
+									.answer orem ipsum dolor sit amet, consectetur adipiscing elit. Integer non lorem turpis. Ut consectetur fringilla sapien sagittis feugiat. Ut venenatis ipsum felis, eget feugiat augue laoreet in. Sed a lectus enim. Ut nunc nisi, rutrum quis tincidunt sit amet, dignissim et nibh. Quisque scelerisque, erat vitae dapibus ornare, neque tortor eleifend diam, in hendrerit turpis erat eu dolor. Vestibulum at justo vel nunc fermentum rhoncus. Vestibulum placerat lobortis laoreet. Etiam euismod sodales lacus et vulputate. Integer consectetur neque neque, consequat varius neque pulvinar quis. Morbi nec viverra massa, nec eleifend lectus. In mattis lorem quis tellus volutpat, ac semper purus lacinia. Nunc velit augue, molestie ac sapien nec,
+				section.articles
+					.container
+						.articles-component
+							.article
+								.img-wrap
+									img(src="img/content/case-01.jpg")
+								.body-wrap
+									h2.title CASE STUDY
+									.description
+										p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer non lorem turpis. Ut consectetur fringilla sapien sagittis feugiat. Ut venenatis ipsum felis, eget feugiat augue laoreet in. Sed a lectus enim. Ut nunc nisi.
+										a(href="#").cbtn.cbtn-main MORE
+							.article
+								.img-wrap
+									img(src="img/content/case-01.jpg")
+								.body-wrap
+									h2.title CASE STUDY
+									.description
+										p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer non lorem turpis. Ut consectetur fringilla sapien sagittis feugiat. Ut venenatis ipsum felis, eget feugiat augue laoreet in. Sed a lectus enim. Ut nunc nisi.
+										a(href="#").cbtn.cbtn-main MORE
+							.article
+								.img-wrap
+									img(src="img/content/case-01.jpg")
+								.body-wrap
+									h2.title CASE STUDY
+									.description
+										p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer non lorem turpis. Ut consectetur fringilla sapien sagittis feugiat. Ut venenatis ipsum felis, eget feugiat augue laoreet in. Sed a lectus enim. Ut nunc nisi.
+										a(href="#").cbtn.cbtn-main MORE
+				section.calculator
+					.container
+						h2.section-title Try Out Our Savings Calculator
+						h3.section-subtitle LEARN HOW YOU CAN SAVE 60% ON YOUR BILL
+						.calculator-component
+							iframe(src="https://ssccust1.spreadsheethosting.com/tmp/1b/9f83c4e7a944bd/Energy%20reduction%20saving%20calculator%20180702/Energy%20reduction%20saving%20calculator%20180702.htm" width='100%' height='450' border='0' frameborder='0')
+				section.contact-us
+					.container
+						h2.section-title SO WHAT'S NEXT? ASK US A QUESTION
+						a(href="#").cbtn.cbtn-second-o CONTACT US
+				section.vision
+					.container
+						h2.section-title World Vision
+		footer.footer-revamp
 			.footer-top
 				.container
 					.logo-component

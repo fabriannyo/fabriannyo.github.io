@@ -17,7 +17,7 @@ Info: Main styling for Free Engineer (desktop-first approach)
 html {
 	font-size: 10px;
 }
-body.revamp {
+body {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	font-size: 10px;
@@ -37,8 +37,7 @@ body.revamp {
 	@import "component/header.scss";
 	
 	// main section
-	main[ role="main" ] {
-		
+	.main-revamp {
 		// each page style goes here
 		// example : @import "pages/homepage"
 		@import "pages/homepage-1.scss";

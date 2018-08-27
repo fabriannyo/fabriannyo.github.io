@@ -1,5 +1,5 @@
 //- header.jade
-header
+header.header-revamp
 	.info-component
 		.container
 			.contacts
@@ -14,25 +14,38 @@ header
 					img(src="img/ui/ic-fb.svg")
 				a.social(href="#")
 					img(src="img/ui/ic-linkedin.svg")
-				 
+				
 	nav.navigation-component.closed
 		.container
-			ul.nav
+			ul.navi
 				li.nav-item
 					a(href="#") HOME
 				li.nav-item
 					a(href="#") OUR STORY
 				li.nav-item
 					a(href="#") HOW CAN WE HELP
-				li.nav-item
+				li.nav-item.has-sub.closed
 					a(href="#") WHY SOLAR
+					ul
+						li.nav-item-level2
+							a(href="#") WHY RESIDENT SOLAR
+						li.nav-item-level2
+							a(href="#") WHY COMMERCIAL SOLAR
+
 				li.nav-logo
 					a(href="#")
 						img(src="img/ui/logo.svg")
 				li.nav-item
 					a(href="#") CONNECT WITH US
-				li.nav-item
+				li.nav-item.has-sub.closed
 					a(href="#") REFERENCES
+					ul
+						li.nav-item-level2
+							a(href="#") BLOG
+						li.nav-item-level2
+							a(href="#") TESTIMONIAL
+						li.nav-item-level2
+							a(href="#") FAQs
 				li.nav-item
 					a(href="#") LOGIN
 				li.nav-item.squared

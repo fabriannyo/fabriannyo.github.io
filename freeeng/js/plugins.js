@@ -57,6 +57,8 @@ FreeEng.UIComponents = function( customSetting ) {
 		initTab();
 
 		initResponsive();
+
+		initNavigation();
 	}
 	
 	// const initHeader = function() {
@@ -66,13 +68,34 @@ FreeEng.UIComponents = function( customSetting ) {
 	// 	}
 	// }
 
+	const initNavigation = function() {
+
+		if ( $('.nav-item-level2').length ) {
+
+			$( '.has-sub' ).on('click', function(e){
+				e.preventDefault();
+
+				$( this ).siblings( '.opened').toggleClass('opened closed');
+				$( this ).toggleClass('opened closed');
+			})
+
+			// event for closing menu if user click outside target
+			$('body').on('click', function(e){
+
+				if ( !$('.has-sub').is(e.target) && $('.has-sub').has(e.target).length === 0 ) {
+					$('.has-sub').removeClass('opened').addClass('closed');
+				}
+			})
+		}
+	}
+
 
 	const initResponsive = function() {
 
 		if ( $('header').length ) {
 
 			// clone logo for responsive
-			$('.nav-logo a').clone().appendTo('header').addClass('logo-mobile');
+			$('.nav-logo a').clone().appendTo('.header-revamp').addClass('logo-mobile');
 
 			// event for mobile trigger
 			$('.mobile-trigger').on('click',function(){

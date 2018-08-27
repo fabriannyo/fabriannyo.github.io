@@ -51,7 +51,7 @@
             display: flex;
             justify-content: center;
 
-            .btn {
+            .cbtn {
                 font-weight: 700;
                 font-size: 1.7rem;
                 letter-spacing: 4px;
@@ -59,7 +59,7 @@
                 text-align: center;
             }
             
-            .btn + .btn {
+            .cbtn + .cbtn {
                 margin: 0 0 0 10px;
             }
         }
@@ -151,10 +151,10 @@
                 .slider-button {
                     flex-wrap: wrap;
 
-                    .btn {
+                    .cbtn {
                         width: 100%;
 
-                        + .btn {
+                        + .cbtn {
                             margin: 10px 0 0 0;
                         }
                     }
@@ -193,10 +193,10 @@
                     margin: 0;
                     flex-wrap: wrap;
 
-                    .btn {
+                    .cbtn {
                         width: 100%;
                         
-                        + .btn {
+                        + .cbtn {
                             margin: 10px 0 0 0;
                         }
                     }
